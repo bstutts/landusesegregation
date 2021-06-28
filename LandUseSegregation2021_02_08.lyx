@@ -1,0 +1,4334 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing other 1.5
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+How land use regulation affects residential segregation by income
+\end_layout
+
+\begin_layout Author
+Benjamin Graham Stutts
+\begin_inset Newline newline
+\end_inset
+
+Southern Methodist University
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Email: bstutts@smu.edu
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Thank you to my dissertation advisor Dr.
+ James Lake and my dissertation committee members Dr.
+ Daniel Millimet and Dr.
+ Klaus Desmet for their invaluable suggestions and critiques throughout
+ the research and paper-writing process.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Residential segregation by income severely limits access to opportunity
+ for low income households, restricting prospects of upward mobility.
+ Land use regulations are one potential determinant of such segregation.
+ However, establishing a causal link between such regulation and segregation
+ faces two econometric challenges.
+ First, regulation is potentially endogenous.
+ Second, proper measurement of segregation is difficult.
+ With regard to the first challenge, the prior literature relies on instrumental
+ variables that may not be valid.
+ With regard to the second challenge, the prior literature relies on measures
+ that ignore the spatial dimension of segregation.
+ This paper uses a new instrumental variable strategy and measures of segregatio
+n that account for the spatial distribution of neighborhoods within US metropoli
+tan areas.
+ The key findings are that stricter overall land use regulation 
+\emph on
+decreases
+\emph default
+ segregation within metropolitan areas and that accounting for the spatial
+ aspect of segregation matters.
+ However, the negative effect appears to be driven by state involvement
+ and approval delay; other types of regulation, such as residential density
+ restrictions (e.g.
+ lot area minimums) and local zoning approval complexity, may 
+\emph on
+increase
+\emph default
+ segregation.
+\end_layout
+
+\begin_layout Abstract
+JEL classification: R14, R23, R31, R52
+\end_layout
+
+\begin_layout Abstract
+Keywords: Land Use Regulation, Zoning, Spatial, Economic Geography, Urban
+ Economics
+\end_layout
+
+\begin_layout Abstract
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\end_inset
+
+Introduction
+\end_layout
+
+\begin_layout Standard
+Residential segregation by income varies widely across metropolitan areas
+ (MSAs) in the United States and has been rising since the 1970s with a
+ brief pause in the 1990s (Reardon et al.
+ 2018).
+ The percent of families living in neighborhoods with median income outside
+ 50-150% of the MSA median rose from 15% in 1970 to 34% in 2012 (Galster
+ and Sharkey 2017).
+ Residential segregation is higher and has risen most among households with
+ children (Chetty et al.
+ 2014, Owens 2016, Reardon et al.
+ 2018).
+ Residential income segregation deprives these families not only of higher
+ quality local amenities like good schools and safe streets but also of
+ diverse social networks that share specialized expertise and career assistance.
+ Rothwell and Massey (2015) estimate the lifetime earnings gap between a
+ top- and bottom-quartile census tract is $910,000.
+ Hence, segregation impedes social and economic mobility and increases social
+ and economic inequality (Chetty et al.
+ 2014, Chetty and Hendren 2018, Ewing et al.
+ 2016, Fogli and Guerreri 2019, Jargowsky 2018, Owens et al.
+ 2016, Reardon and Bischoff 2011, Rothwell and Massey 2015).
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The United States exhibits wide geographic disparities both between and
+ within metro areas in upward social and economic mobility (Intrator et
+ al.
+ 2016, Galster and Sharkey 2017, Lens 2017).
+ Housing costs reduce intergenerational economic mobility by making it harder
+ for low-income households to live in high-opportunity neighborhoods and
+ still finance education and save (Chetty et al.
+ 2020).
+ Residential income segregation creates unequal opportunities that deprive
+ poorer children regardless of their potential (Jargowsky and Wheeler 2017,
+ Acs et al.
+ 2017).
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Land use regulation may contribute to residential segregation.
+ Residential land use regulations can protect a community's public amenities
+ but slow housing stock growth and raise housing costs, contributing to
+ income sorting between and possibly within MSAs (Glaeser and Gyourko 2018,
+ Ganong and Shoag 2017).
+ Restricting the quantity of housing within a high-demand area limits residentia
+l access to those most willing to pay.
+ Metro-wide residential zoning restrictions raise fixed costs of housing,
+ circumscribing lower-income housing options.
+ Higher income households outbid lower income households for limited housing
+ within highly-regulated high-opportunity MSAs.
+ This may concentrate high-income households in high-demand neighborhoods
+ and sort lower-income households into lower opportunity or more peripheral
+ neighborhoods within those MSAs as well as into separate MSAs entirely.
+ 
+\end_layout
+
+\begin_layout Standard
+Local land use rules may affect housing markets and the income distribution
+ of residents not only within their own jurisdictions but also in other
+ jurisdictions across the broader economic region.
+ Local zoning laws across the United States restrict residential density
+ to varying degrees.
+ Without density restrictions, rising residential land values in high-demand
+ neighborhoods encourage higher density development until the premium per
+ housing unit disappears.
+ Density limits preserve housing unit premiums in high-demand neighborhoods,
+ geographically separating the housing market by income level.
+\end_layout
+
+\begin_layout Standard
+While density restrictions are expected to increase residential segregation,
+ it is not obvious that land use regulation should always increase residential
+ segregation.
+ If residential preferences favor sorting by income, then (especially if
+ neighborhood quality changes over time) higher costs of obtaining project
+ approval may reduce residential re-sorting (Schelling 1971).
+ Thus, MSAs with stricter land use regulations may have lower residential
+ segregation.
+ Ultimately, the size and direction of any effect of land use rules depends
+ on the nature of residential preferences.
+\end_layout
+
+\begin_layout Standard
+The Schelling (1971) model presents full residential segregation as the
+ unique stable equilibrium under even a slight preference for living amonst
+ peers.
+ Building off Schelling's checkerboard model of segregation, imagine a checkerbo
+ard with rich and poor people buying a location on a checkerboard without
+ any restrictions on the number of people per square and no preferences
+ over squares or neighbors.
+ Rich and poor people will randomly disperse across the board.
+ Without locational preferences, restricting density would not substantively
+ affect segregation because it would only increase the average distance
+ between everyone on the checkerboard.
+ However, with locational preferences, density restrictions can affect segregati
+on.
+ By increasing the price of squares in high demand locations, density restrictio
+ns increase income segregation.
+ Nevertheless, permitting restrictions that raise the fixed cost of moving
+ would slow any re-sorting.
+ Thus, in general, land use regulations have an ambiguous effect on income
+ segregation.
+\end_layout
+
+\begin_layout Standard
+This paper investigates how land use regulation influences residential segregati
+on by income in MSAs, using a segregation measure that accounts for the
+ spatial distance between neighborhoods.
+ I hypothesize that density restrictions will increase spatial segregation
+ and high-income residential concentration by making housing in high-demand
+ areas highly supply inelastic.
+ Other land use restrictions may raise or lower segregation.
+\end_layout
+
+\begin_layout Standard
+Examining segregation between neighborhoods within MSAs requires a definition
+ of neighborhood boundaries.
+ A neighborhood alludes to a local spatial area of regular physical social
+ interaction, but no uniform definition of boundaries exists.
+ Segregation measures commonly use census tracts or block groups to proxy
+ neighborhood boundaries.
+ Chetty et al.
+ (2014) observes sharp contrasts in economic mobility even at the block
+ level in some MSAs, suggesting segregation may matter at many spatial scales.
+\end_layout
+
+\begin_layout Standard
+Traditional segregation measures compare characteristics across neighborhoods
+ within an MSA without accounting for distance between neighborhoods.
+ Effective segregation may be less severe when high- and low-income neighborhood
+s are close together than when they are distant.
+ Ranking MSAs by residential segregation depends on the choice of measure
+ and level of analysis: Census block, block group, tract, etc.
+ (Lee et al.
+ 2008).
+ This paper's primary segregration measure, the spatial information theory
+ index from Reardon and O'Sullivan (2004), accounts for varying degrees
+ of spatial proximity between neighborhoods.
+\end_layout
+
+\begin_layout Standard
+Spatial scales matter for segregation.
+ Aspatial measures don't capture proximity between sub-areas, resulting
+ in the checkerboard problem (Lens 2017, Reardon and O’Sullivan 2004).
+ The problem is that a metro area with segregated neighborhoods dispersed
+ evenly throughout the metro area (like red and black squares on a checkerboard)
+ would score no differently than a metro area with equally segregated neighborho
+ods concentrated (like a board all red on the left and all black on the
+ right).
+ But these two different situations seemingly convey very different notions
+ of segregation.
+ Thus, it is important for metro area residential segregation measures to
+ reflect the spatial distribution of people within the metro area.
+\end_layout
+
+\begin_layout Standard
+Aspatial measures also suffer from the modifiable areal unit problem: sensitivit
+y to the choice of sub-area unit land area size and boundaries to the extent
+ proportions of population groups in nearby sub-areas vary.
+ Tract and block group land area shrinks with population density (Lee et
+ al.
+ 2019).
+ While residents of less dense areas in car-oriented suburbs may regularly
+ cover greater geographic distance, residents in denser areas may regularly
+ interact with a larger population.
+ Tract-based aspatial measures may thus overstate segregation in densely
+ populated areas and understate it in less dense areas.
+ 
+\end_layout
+
+\begin_layout Standard
+The spatial information theory index better reflects the lack of distinct
+ neighborhood boundaries in densely populated areas.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See Reardon et al.
+ (2008) and Population Research Institute (www.pop.psu.edu/mss) on spatial
+ measures.
+\end_layout
+
+\end_inset
+
+ Spatial weights capture the proximity of nearby areas beyond sub-area unit
+ boundaries (Reardon et al.
+ 2006; Reardon et al.
+ 2008; Lee et al.
+ 2008; Reardon and Bischoff 2011; Lee et al.
+ 2019).
+ Adopting the spatial information theory index from Reardon and O'Sullivan
+ (2004) allows this paper to account for the proximity of people in one
+ block group to people in nearby block groups and explore how land use regulatio
+n might affect spatial evenness at different geographic scales.
+\end_layout
+
+\begin_layout Standard
+The analysis here closely relates to two prior empirical studies, Rothwell
+ and Massey (2010) and Lens and Monkonnen (2016), that indicate density-restrict
+ing land use regulation increases segregation.
+ Rothwell and Massey (2010) find density zoning restrictions increase residentia
+l income segregation in US MSAs but find no evidence of an effect for other
+ land use regulations or broader indices like the 2005 Wharton Residential
+ Land Use Regulation Index (WRLURI).
+ They measure segregation via a Neighborhood Gini coefficient, an exposure
+ index of poor to affluent, and a poverty dissimilarity index.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See the Appendix section below or Rothwell and Massey (2010) for a description
+ of these segregation measures.
+\end_layout
+
+\end_inset
+
+Rothwell and Massey measure maximum permitted dwelling units per acre and
+ other zoning rules using Pendall, Puentes, and Martin (2006)'s 2003 survey
+ of local land use regulations in 1,677 out of roughly 5,000 total jurisdictions
+ in the 50 largest MSAs in the United States.
+ Rothwell and Massey's two-stage least squares (2SLS) estimates use year
+ of statehood and MSA population density in 1910 as IVs and control for
+ socioeconomic and environmental characteristics.
+\end_layout
+
+\begin_layout Standard
+Lens and Monkkonen (2016) find lot size minimums increase segregation of
+ the high and middle income but not low income.
+ Municipal review process complexity and local political pressure to restrict
+ land use also increase segregation.
+ State involvement in land use regulation reduces income segregation.
+ They measure 2010 segregation for MSAs with over 500,000 people using the
+ aspatial Reardon and O’Sullivan (2004) ordinal information theory index
+ that compares the percent difference in MSA income diversity and a population-w
+eighted sum of each block group's income diversity.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See the Methods section below for a formal discussion of segregation measurement.
+\end_layout
+
+\end_inset
+
+ They run OLS with controls using the 2005 Wharton Residential Land Use
+ Regulation Index (WRLURI) survey of 11 categories of local land use regulations
+ from Gyourko et al.
+ (2008).
+\end_layout
+
+\begin_layout Standard
+However, their identification strategies may be inadequate to establish
+ causality, and their segregation measures do not account for the socioeconomic
+ composition of nearby neighborhoods.
+ This paper, like Lens and Monkonnen (2016), uses the Wharton Residential
+ Land Use Regulation Index (WRLURI) that surveys 1,904 jurisdictions in
+ 293 MSAs, instead of the Pendall land use regulation survey that Rothwell
+ and Massey (2010) uses, to increase the number of observations.
+ I extend the work of these papers in two ways.
+ First, I use more convincing instrumental variables (IVs).
+ Second, I use additional measures of MSA-level segregation that capture
+ the geographic distance between neighborhoods, using Census block group
+ as a proxy for neighborhood.
+\end_layout
+
+\begin_layout Standard
+My primary specifications measure MSA residential segregation by income
+ using the spatial ordinal information theory index, from Reardon et al.
+ (2006).
+ The index relies on 2012-2016 5-year ACS block-level Census data and the
+ NBER block group distance database for the 2010 US Census.
+ I estimate the causal effect of MSA-level averages of municipal WRLURI
+ scores on this segregation measure using 2SLS.
+ Because historical segregation patterns and other factors likely influence
+ both 2005 land use regulation and 2012-2016 segregation, I instrument for
+ land use regulation using the 1982 share of protective inspection and regulatio
+n expenditures from the US Census of Governments and 1991 stream count from
+ the US Geological Survey (USGS) (Dawkins 2005, Saiz 2010).
+ 1982 protective expenditure share proxies an MSA's historical political
+ affinity for regulation in general, which should predict land use regulation
+ and is otherwise plausibly unrelated to segregation.
+ 1991 stream count proxies an MSA's geographic fragmentation, assumed to
+ affect segregation only through its contribution to political fragmentation
+ and land use regulation.
+ I also estimate the causal effect of WRLURI on the spatial information
+ theory index of Black-White segregation.
+\end_layout
+
+\begin_layout Standard
+This paper's main contribution is finding that land use regulation, measured
+ by WRLURI, reduces MSA segregation by income under a range of measures
+ that incorporate geographic distance between block groups.
+ Heterogeneous effects across WRLURI components suggest differential effects
+ by the type of land use regulation.
+ Approval Delay and State Political Involvement Indexes reduce segregation,
+ whereas the number of local bodies required to approve zoning changes increases
+ segregation at all but the smallest spatial scales.
+ The Density Restriction Index is positively associated with segregation
+ but only significant in ordinary least squares (OLS) specifications.
+\end_layout
+
+\begin_layout Standard
+In sum, prior empirical findings show land use restrictions, particularly
+ on density, increase residential segregation by income and race (Berry
+ 2001; Rothwell and Massey 2009, 2010; Rugh and Massey 2014; Lens and Monkkonen
+ 2016).
+ Closely building on Lens and Monkonnen (2016) and Rothwell and Massey (2010),
+ this paper applies distance-based spatial segregation measures that better
+ reflect effective segregation of economic opportunity and an alternative
+ identification approach to address endogeneity.
+ This paper finds overall land use regulation reduces MSA segregation.
+ However, results vary by the measure of segregation and type of land use
+ regulation.
+ 
+\end_layout
+
+\begin_layout Standard
+Section 2 describes my methodological framework, identification strategy,
+ and segregation measures.
+ Section 3 describes my data.
+ Section 4 reports the results.
+ Section 5 concludes.
+\end_layout
+
+\begin_layout Section
+Methods
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Empirical Framework
+\end_layout
+
+\begin_layout Standard
+The empirical framework closely follows Rothwell and Massey (2010) and Lens
+ and Monkonnen (2016).
+ The empirical specifications regress MSA-level segregation variables from
+ the 2016 5-year ACS on the 2005 Wharton Residential Land Use Regulation
+ Index (WRLURI).
+ The lag between 2005 and 2012-2016 provides time for land use regulations
+ to affect residential segregation.
+ My controls are mostly from the 2000 Census to avoid errors cross-walking
+ from 2016 to the 2000 MSA boundaries that WRLURI uses.
+ I first follow the main regression from Lens and Monkonnen (2016), except
+ I use ACS 2012-2016 segregation data instead of 2010 data and I do not
+ drop MSAs with fewer than 500,000 people.
+\end_layout
+
+\begin_layout Standard
+I use the model:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{i}=\beta_{0}+\beta_{1}R{}_{i}+X_{i}\beta_{2}+u_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+where 
+\begin_inset Formula $i$
+\end_inset
+
+ is MSA (2000 Census MSA/PMSA).
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ is a measure of segregation by household income, the ratio of household
+ income to the poverty threshold, or race.
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ is the score for WRLURI or one of its components.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ is a vector of controls: the natural log of the MSA's total population
+ (2000 Census), the Gini Index of Income Inequality (ACS 2016 5-year), the
+ share of households with annual household income less than $20,000 (2000
+ Census), the share of households with annual household income at least
+ $60,000 (2000 Census), the share of the total population who is Black alone
+ or Hispanic alone (2000 Census), and the number of general purpose municipality
+ governments (e.g.
+ cities and townships) in 2002.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Identification
+\end_layout
+
+\begin_layout Standard
+Land use regulation may be endogenous because past segregation and other
+ variables may influence both an MSA's land use policy and current segregation.
+ This paper seeks to address this concern through the use of instrumental
+ variables that plausibly affect land use regulation but not segregation.
+\end_layout
+
+\begin_layout Standard
+Rothwell and Massey (2010) instrument for land use regulation with year
+ of statehood and 1910 population density, which the authors suggest proxy
+ for MSAs with more established suburban settlements that would typically
+ restrict land use more than would new settlements.
+ Rothwell and Massey (2010) observe that MSAs with later statehood year
+ tend to have had less time for rural settlements to form around cities.
+ They hypothesize older rural settlements are more likely to have established
+ political coalitions opposing new development, citing Olson (1982).
+ Such settlements may be more prevalent in historically denser MSAs.
+ They observe zoning restrictiveness measured by a zoning survey has a strong
+ negative correlation with statehood year and positive correlation with
+ 1910 population density, consistent with this hypothesis.
+ To be valid, 1910 population density and statehood year must only affect
+ segregation via channels captured by variables included in the regression
+ model.
+\end_layout
+
+\begin_layout Standard
+While statehood year and 1910 population density mostly predate the adoption
+ of zoning and other modern land use regulations, these instruments may
+ not be valid if MSAs in older states or with higher 1910 population densities
+ are systematically more or less prone to segregation through channels outside
+ land use policy such as their effect on modern population density.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Rothwell and Massey (2010) include population density as a control in their
+ initial regression with extensive controls before pairing down to their
+ preferred parsimonious regression.
+\end_layout
+
+\end_inset
+
+ Statehood year may be invalid if it proxies for historical racial segregation.
+ 1910 population density of MSAs may be subject to bias from endogenous
+ MSA boundaries.
+ For instance, an MSA in California includes predominantly rural Kern County,
+ one of the geographically largest counties in the US.
+ By contrast, New England MSAs define boundaries by municipalities rather
+ than counties.
+ New England MSAs are thus more likely to exclude rural areas and, in turn,
+ will appear denser than in other states.
+\end_layout
+
+\begin_layout Standard
+Instead, my preferred MSA-level instrumental variables for WRLURI are 1982
+ protective regulation and inspection expenditure share from Saiz (2010)
+ and number of stream segments in the 1991 USGS hydrography layer from the
+ 1:2,000,000 DLG data from Dawkins (2005).
+ Dawkins (2005) and Hoxby (2000) employed number of streams as an instrument
+ for municipal competition on segregation.
+ They note that streams often formed municipal boundaries, especially in
+ the 19th century when even smaller streams posed significant transportation
+ barriers.
+ Thus, areas with a greater number of streams would be more likely to have
+ a greater number of municipal jurisdictions.
+ This greater number of jurisdictions would also create greater incentive
+ for local regulation attempting to capture local land rents within an MSA
+ and free ride as much as possible on surrounding neighborhoods by restricting
+ their own land use.
+ Because the number of jurisdictions could affect segregation, I control
+ for the number of jurisdictions.
+ Even after controlling for the number of jurisdictions, the number of streams
+ is negatively associated with WRLURI.
+ But Cutler and Glaeser (1997) find no significant correlation between the
+ number of streams and segregation after controlling for the number of jurisdict
+ions.
+ Hence, it seems plausible that the number of streams is unrelated to segregatio
+n except through land use regulation and my controls.
+ 
+\end_layout
+
+\begin_layout Standard
+Additionally, I use local public protective inspection and regulation expenditur
+es as a share of local government revenues from the Census 1982 State and
+ Local Government Finance Data.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The US Census Bureau defines protective inspection and regulation as 
+\begin_inset Quotes eld
+\end_inset
+
+regulation of private enterprise for the protection of the public and inspection
+ of hazardous activities except for major functions, such as fire prevention,
+ health, natural resources, etc.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+ Saiz (2010) argues this local government spending allocation may proxy
+ for local preference for regulation independent of housing preferences.
+ He uses the variable to instrument for WRLURI in housing elasticity regressions.
+ Protective expenditure share correlates positively with WRLURI.
+ While segregation may be related to the levels of public expenditures,
+ it seems plausible that the public protective regulation and inspection
+ expenditures as a share of public revenue is not related to segregation
+ except through land use regulation.
+\end_layout
+
+\begin_layout Subsection
+Measurement of Segregation
+\end_layout
+
+\begin_layout Standard
+My specifications include spatial and aspatial versions of the information
+ theory indexes for household income, poverty ratio, and race.
+ For each of the spatial information theory indexes, I run specifications
+ with measures at 500, 1000, 2000, 4000, and 8000 meter radii.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Chetty et al.
+ (2020) find characteristics of blocks only within a mile of a child's block
+ help explain a child's future earnings.
+ Smaller spatial scales like 500m matter more for those with restricted
+ mobility like young children and the elderly.
+ Intermediate spatial scales like 2000m may be more important for teenagers.
+ Larger distances may matter more for mobile working-age adults.
+\end_layout
+
+\end_inset
+
+ My preferred measure is the spatial ordinal information theory index of
+ household income segregation.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Massey and Denton (1988) identify five dimensions of segregation: evenness,
+ exposure, concentration, centralization, and clustering.
+ Reardon and O'Sullivan (2004) condense all five dimensions into two broader
+ dimensions: spatial evenness and spatial exposure.
+ Spatial evenness reflects how similarly different population groups distribute
+ across residential space within a metro area.
+ Spatial exposure reflects how prevalent members of one population group
+ are in the residential space near a member of another group.
+\end_layout
+
+\begin_layout Plain Layout
+My main specifications use the spatial ordinal information theory index
+ from Reardon et al.
+ (2006), a weighted average of binary-group segregation values (Reardon
+ 2011).
+ The spatial information theory index captures spatial evenness.
+ It builds on the aspatial Theil's 
+\emph on
+H
+\emph default
+ Information Theory Index (Reardon et al.
+ 2018).
+ Reardon (2011) demonstrates its robustness to income category thresholds
+ for US MSAs if using all Census income bins and to the set of income bins
+ if bins span most of the income distribution.
+\end_layout
+
+\end_inset
+
+ To build this index, I will first describe an aspatial information theory
+ index 
+\begin_inset Formula $H$
+\end_inset
+
+ and move on to a spatial information theory index 
+\begin_inset Formula $\tilde{H}$
+\end_inset
+
+.
+ I will then describe how to move to an aspatial ordinal information theory
+ index 
+\begin_inset Formula $H_{O}$
+\end_inset
+
+ and Reardon's spatial ordinal information theory index 
+\begin_inset Formula $\tilde{H}_{O}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The aspatial information theory index measures how different the population
+ composition of an MSA is as an aggregate unit of geography relative to
+ its constituent block groups.
+ I will always be comparing two groups 
+\begin_inset Formula $m$
+\end_inset
+
+: either the share White vs.
+ share Black or the share above vs.
+ share below income threshold 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ The building block for the difference between the population composition
+ of an MSA and its constituent block groups is a population diversity measure
+ called the Entropy Diversity Index:
+\begin_inset Formula 
+\begin{equation}
+E=\begin{cases}
+\sum_{m=1}^{2}\frac{P_{m}}{\sum_{n=1}^{2}P_{n}}\ln(\frac{\sum_{n=1}^{2}P_{n}}{P_{m}}) & \textrm{if}\:0<\frac{P_{m}}{\sum_{n=1}^{2}P_{n}}<1\\
+0 & \textrm{otherwise}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+ and 
+\begin_inset Formula 
+\begin{equation}
+E_{j}=\begin{cases}
+\sum_{m=1}^{2}\frac{P_{jm}}{\sum_{n=1}^{2}P_{jn}}\ln(\frac{\sum_{n=1}^{2}P_{jn}}{P_{jm}}) & \textrm{if}\:0<\frac{P_{jm}}{\sum_{n=1}^{2}P_{jn}}<1\\
+0 & \textrm{otherwise}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $E$
+\end_inset
+
+ is the Entropy Diversity Index for the overall MSA, 
+\begin_inset Formula $E_{j}$
+\end_inset
+
+ is the aspatial Entropy Diversity Index for sub-area unit (e.g.
+ Census block group) 
+\begin_inset Formula $j$
+\end_inset
+
+ within the MSA, 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ are sub-population categories where 
+\begin_inset Formula $m,n=1$
+\end_inset
+
+ is the relatively disadvantaged group (e.g.
+ below income threshold 
+\begin_inset Formula $t$
+\end_inset
+
+) and 
+\begin_inset Formula $m,n=2$
+\end_inset
+
+ is the relatively advantaged group (e.g.
+ above income threshold 
+\begin_inset Formula $t$
+\end_inset
+
+), 
+\begin_inset Formula $P_{m}$
+\end_inset
+
+ is the MSA's population in sub-population category 
+\begin_inset Formula $m$
+\end_inset
+
+ (e.g.
+ MSA population below income threshold 
+\begin_inset Formula $t$
+\end_inset
+
+), and 
+\begin_inset Formula $P_{jm}$
+\end_inset
+
+ is sub-area unit 
+\begin_inset Formula $j$
+\end_inset
+
+'s population in category 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $E=0$
+\end_inset
+
+ or 
+\begin_inset Formula $E_{j}=0$
+\end_inset
+
+, the MSA or sub-area unit, respectively, only has people from one of the
+ two sub-population categories.
+ The larger the value of 
+\begin_inset Formula $E$
+\end_inset
+
+ or 
+\begin_inset Formula $E_{j}$
+\end_inset
+
+ (up to a maximum of 1), the more equal are the population shares of categories
+ 
+\begin_inset Formula $m=1$
+\end_inset
+
+ and 
+\begin_inset Formula $m=2$
+\end_inset
+
+ within the MSA or sub-area unit, respectively.
+\end_layout
+
+\begin_layout Standard
+The Information Theory Index 
+\begin_inset Formula $H$
+\end_inset
+
+ is:
+\begin_inset Formula 
+\begin{equation}
+H=1-\frac{\sum_{j=1}^{J}\left(\sum_{m=1}^{2}\frac{P_{jm}}{P_{m}}E_{j}\right)}{E}
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $J$
+\end_inset
+
+ is the number of sub-area units 
+\begin_inset Formula $j$
+\end_inset
+
+ in the MSA.
+ The Information Theory Index ranges from zero to one.
+ When 
+\begin_inset Formula $H=0$
+\end_inset
+
+, knowing the block group a person lives in is no more informative about
+ the person's likelihood of belonging to category 
+\begin_inset Formula $m$
+\end_inset
+
+ than is knowing the person's MSA.
+ When 
+\begin_inset Formula $H=1$
+\end_inset
+
+, knowing the block group a person lives in fully informs you about the
+ category 
+\begin_inset Formula $m$
+\end_inset
+
+ to which a person belongs.
+ This binary form of the information theory measure (i.e.
+ 
+\begin_inset Formula $m$
+\end_inset
+
+ has two possible values) provides both my measure of Black-White segregation
+ and the components for my primary aspatial measure of income segregation.
+\end_layout
+
+\begin_layout Standard
+Spatial versions of the information theory index reflect how informative
+ knowing a person lives within radius 
+\begin_inset Formula $r$
+\end_inset
+
+ of a Census block group 
+\begin_inset Formula $j$
+\end_inset
+
+ is for knowing the category 
+\begin_inset Formula $m$
+\end_inset
+
+ to which the person belongs.
+ The Spatial Ordinal Information Theory Index 
+\begin_inset Formula $\tilde{H}$
+\end_inset
+
+ accounts for the population composition of nearby sub-area units up to
+ some radius distance 
+\begin_inset Formula $r$
+\end_inset
+
+ (e.g.
+ 500m).
+ This is done by creating a Spatial Entropy Diversity Index 
+\begin_inset Formula $\tilde{E}_{j}$
+\end_inset
+
+ for each sub-area unit 
+\begin_inset Formula $j$
+\end_inset
+
+ using proximity-based weights: 
+\begin_inset Formula 
+\begin{equation}
+w_{jk}=\begin{cases}
+[1-(\frac{d_{jk}}{r})^{2}]^{2} & \textrm{if}\:d_{jk}<r\\
+0 & {\textstyle \mathrm{otherwise}}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+for every combination of sub-area units 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ where 
+\begin_inset Formula $d_{jk}$
+\end_inset
+
+ is distance in miles between the internal points of sub-area units 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ For each group 
+\begin_inset Formula $m$
+\end_inset
+
+ in each sub-area 
+\begin_inset Formula $j$
+\end_inset
+
+, there is a spatially-weighted local population composition (LPC) function:
+ 
+\begin_inset Formula 
+\begin{equation}
+LPC_{jm}=\frac{\sum_{k\in J}P{}_{km}\times w{}_{jk}}{\sum_{k\in J}(\sum_{n=1}^{2}P{}_{kn})\times w{}_{jk}}
+\end{equation}
+
+\end_inset
+
+that divides the sum of all these weighted nearby-sub-area populations in
+ group 
+\begin_inset Formula $m$
+\end_inset
+
+ by the weighted sum of the population overall.
+ The Spatial Entropy Diversity Index for each 
+\begin_inset Formula $j$
+\end_inset
+
+ is then: 
+\begin_inset Formula 
+\begin{equation}
+\tilde{E}_{j}=\begin{cases}
+\sum_{m=1}^{2}LPC_{jm}\ln(\frac{1}{LPC_{jm}}) & \textrm{if}\:0<LPC_{jm}<1\\
+0 & \textrm{otherwise}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Substituting 
+\begin_inset Formula $\tilde{E}_{j}$
+\end_inset
+
+ into the information theory index gives the Spatial Information Theory
+ Index: 
+\begin_inset Formula 
+\begin{equation}
+\tilde{H}=1-\frac{\sum_{j=1}^{J}\left(\frac{P_{j}}{P}\tilde{E}_{j}\right)}{E}
+\end{equation}
+
+\end_inset
+
+The binary form of 
+\begin_inset Formula $\tilde{H}$
+\end_inset
+
+ (i.e.
+ 
+\begin_inset Formula $m$
+\end_inset
+
+ has two possible values) provides both my spatial measure of Black-White
+ segregation as well as the components for my primary spatial income segregation
+ measure, the Spatial Ordinal Information Theory Index.
+ When 
+\begin_inset Formula $\tilde{H}=0$
+\end_inset
+
+, knowing the block group a person lives in is no more informative about
+ the likelihood a neighbor belongs to category 
+\begin_inset Formula $m$
+\end_inset
+
+ than is knowing the person's MSA.
+ When 
+\begin_inset Formula $\tilde{H}=1$
+\end_inset
+
+, knowing the block group a person lives in fully informs you about the
+ category 
+\begin_inset Formula $m$
+\end_inset
+
+ to which a neighbor belongs.
+ Neighbors include anyone in the same block group and a proximity-weighted
+ share of people in other block groups within a specified radius (500m,
+ 1000m, 2000m, 4000m, or 8000m).
+\end_layout
+
+\begin_layout Standard
+To measure income segregation for my aspatial baseline specification, I
+ use the Ordinal Information Theory Index 
+\begin_inset Formula $H_{O}$
+\end_inset
+
+ (Reardon 2011, Lens and Monkkonen 2016).
+ Here, the sub-area units 
+\begin_inset Formula $j$
+\end_inset
+
+ are Census block groups, and the sub-population categories 
+\begin_inset Formula $m=1,2$
+\end_inset
+
+ are the groups above and below an income threshold 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ That is, equation (3) provides 
+\begin_inset Formula $H_{t}$
+\end_inset
+
+ for a given income threshold.
+ Then, 
+\begin_inset Formula 
+\begin{equation}
+H_{O}=\sum_{t=1}^{T}\frac{E_{t}H_{t}}{\sum_{u=1}^{T}E_{u}}
+\end{equation}
+
+\end_inset
+
+is a weighted average of 
+\begin_inset Formula $H_{t}$
+\end_inset
+
+ across all income thresholds 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+For my measures, 
+\begin_inset Formula $H_{t}$
+\end_inset
+
+ are binary-group indices of segregation of those above income threshold
+ 
+\begin_inset Formula $t$
+\end_inset
+
+ from those below income threshold 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ The two categories 
+\begin_inset Formula $m$
+\end_inset
+
+ are: (1) population above and (2) population below some income threshold
+ 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ 
+\begin_inset Formula $H_{t}$
+\end_inset
+
+ calculates how closely each block group’s population shares above and below
+ income threshold 
+\begin_inset Formula $t$
+\end_inset
+
+ match those of the overall MSA.
+ It sums these values of each block group in the MSA weighted by the block
+ group’s share of the MSA’s population.
+ 
+\begin_inset Formula $H_{O}$
+\end_inset
+
+ aggregates all values of 
+\begin_inset Formula $H_{t}$
+\end_inset
+
+ for each 
+\begin_inset Formula $t$
+\end_inset
+
+, weighted by the value of 
+\begin_inset Formula $E_{t}$
+\end_inset
+
+, which increases the closer 
+\begin_inset Formula $t$
+\end_inset
+
+ is to the 50th percentile in the MSA population.
+ 
+\begin_inset Formula $E_{t}$
+\end_inset
+
+ (
+\begin_inset Formula $E_{u}$
+\end_inset
+
+) is the Entropy Diversity Index 
+\begin_inset Formula $E$
+\end_inset
+
+ where the two categories 
+\begin_inset Formula $m$
+\end_inset
+
+ are: (1) population above and (2) population below some income threshold
+ 
+\begin_inset Formula $t$
+\end_inset
+
+ (
+\begin_inset Formula $u$
+\end_inset
+
+).
+ 
+\end_layout
+
+\end_inset
+
+ To measure income segregation for my spatial specifications, I use the
+ Spatial Ordinal Information Theory Index 
+\begin_inset Formula $\tilde{H}_{O}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\tilde{H}_{O}=\sum_{t=1}^{T}\frac{E_{t}\tilde{H}_{t}}{\sum_{u=1}^{T}E_{u}}
+\end{equation}
+
+\end_inset
+
+that is simply the spatial analog of 
+\begin_inset Formula $H_{O}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+\noindent
+Data
+\end_layout
+
+\begin_layout Subsection
+Dependent Variables: Aspatial and Spatial Segregation Measures
+\end_layout
+
+\begin_layout Standard
+This paper's dependent variables are MSA-level segregation measures created
+ from ACS 5-year 2016 block group and the NBER Census Block Group Distance
+ Database data crosswalked to 1999 MSA and PMSA boundaries of 295 MSAs and
+ PMSAs.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+ACS 5-year 2016 block group population counts are not adjusted to ensure
+ they match official population estimates.
+ US Census encourages using ACS block group data only to compare percentages
+ and averages, not population or sub-group population counts.
+ However, my segregation measures rely on these population counts and are
+ susceptible to significant measurement error.
+ See: https://www.census.gov/programs-surveys/acs/guidance/handbooks/researchers.ht
+ml
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $^{,}$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+I use Metropolitan Areas from 1999 defined by the Office of Management and
+ Budget (OMB) under a complex set of standards (see: https://www.govinfo.gov/conte
+nt/pkg/FR-1998-12-21/pdf/98-33676.pdf#).
+ Typically, a metropolitan area includes central counties (cities/towns
+ only in New England) containing most of a city or urbanized area of at
+ least 50,000 people and outlying counties (cities/towns only in New England)
+ with any of the following: (1) at least 50% of employed residents commuting
+ into the central counties and at least 25 people per sqmi; (2) 40%+ commuting
+ and 35+ per sqmi or 5000+ residents live in qualifier urbanized area; (3)
+ 25%+ commuting and 50+ per sqmi or two of following: (a) 35+ per sqmi,
+ (b) 35% urban population, (c) 5000+ in qualifier urbanized area; (4) 15%+
+ commuting (or workers commuting from central counties is 15%+ and all workers
+ commuting to and from central counties if 20%+ of employed residents) and
+ two of following: (a) 60+ per sqmi, (b) 35% urban population, (c) 20%+
+ population growth between last decennial censuses, (d) 5000+ in qualifer
+ urbanized area; (5) 2500+ residents live in central city.
+ This paper refers to both MSAs (metropolitan statistical areas) and PMSAs
+ (primary metropolitan statistical areas) as MSAs.
+ 
+\end_layout
+
+\end_inset
+
+ Each regression employs a version of the information theory index to capture
+ the evenness or spatial evenness dimension of segregation.
+ Relative segregation between MSAs varies with scale, but Table 1 shows
+ that the correlation across scales within each measure always exceeds .75.
+\end_layout
+
+\begin_layout Paragraph
+Ordinal Information Theory Index for Poverty:
+\end_layout
+
+\begin_layout Standard
+I use the Stata “rankseg” command to create an ordinal information theory
+ index (equation 8) using population counts of bins for people with income
+ in the following percentage ranges of the poverty threshold: 0-49%, 50-99%,
+ 100-124%, 125-149%, 150-184%, 185-199%, and 200%+.
+ Hence, this ordinal index is a weighted sum of six information theory indexes
+ (one for segregation of people with household income above from people
+ with household income below each of the following percentages of the poverty
+ line: 50%, 100%, 125%, 150%, 185%, and 200%).
+\end_layout
+
+\begin_layout Paragraph
+Ordinal Information Theory Index for Income:
+\end_layout
+
+\begin_layout Standard
+I use the Stata “rankseg” command to create a ordinal information theory
+ index (equation 8) using number of household counts of bins for the following
+ 16 household income ranges: $0-9,999, $10,000-14,999, $15,000-19,999, $20,000-2
+4,999, $25,000-29,999, $30,000-34,999, $35,000-39,999, $40,000-44,999, $45,000-4
+9,999, $50,000-59,999, $60,000-74,999, $75,000-99,999, $100,000-124,999,
+ $125,000-149,999, $150,000-199,999, and $200,000+.
+ Hence, this ordinal index is a weighted sum of 15 information theory indexes,
+ one for segregation of households with income above from households with
+ income below each of the following income thresholds: $10,000, $15,000,
+ $20,000, $25,000, $30,000, $35,000, $40,000, $45,000, $50,000, $60,000,
+ $75,000, $100,000, $125,000, $150,000, and $200,000.
+\end_layout
+
+\begin_layout Paragraph
+Black-White Information Theory Index for Race:
+\end_layout
+
+\begin_layout Standard
+For the simpler non-ordinal information theory indexes, I use Reardon and
+ Townsend's 
+\begin_inset Quotes eld
+\end_inset
+
+seg
+\begin_inset Quotes erd
+\end_inset
+
+ command for a Theil's 
+\begin_inset Formula $H$
+\end_inset
+
+ (equation 3) for racial categories White non-Hispanic and Black non-Hispanic
+ (Reardon 2011, Reardon et al.
+ 2018).
+\end_layout
+
+\begin_layout Paragraph
+Spatial Ordinal Information Theory Indexes for Poverty and for Income:
+\end_layout
+
+\begin_layout Standard
+Following Reardon et al (2006), I create separate indexes (equation 9) that
+ account for the population composition of nearby block groups up to each
+ of the following radii 
+\begin_inset Formula $r$
+\end_inset
+
+: 500m, 1000m, 2000m, 4000m, and 8000m.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The “rankseg” command doesn’t include a spatial option, so I create spatial-adju
+sted ordinal bins.
+ First, I create the proximity-based weight function 
+\begin_inset Formula $w_{jk}$
+\end_inset
+
+ for every combination of block groups 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ (equation 5).
+ For each group 
+\begin_inset Formula $m$
+\end_inset
+
+ in each block group 
+\begin_inset Formula $j$
+\end_inset
+
+, I create the spatially-weighted local population composition (LPC) function
+ 
+\begin_inset Formula $LPC_{jm}$
+\end_inset
+
+ that divides the sum of all these weighted nearby-block-group populations
+ in group 
+\begin_inset Formula $m$
+\end_inset
+
+ by the sum of weighted nearby-block-group populations overall.
+ 
+\begin_inset Formula $LPC_{jm}$
+\end_inset
+
+ multiplied by block group 
+\begin_inset Formula $j$
+\end_inset
+
+'s population then serve for the spatial-adjusted ordinal bins when I run
+ 
+\begin_inset Quotes eld
+\end_inset
+
+rankseg
+\begin_inset Quotes erd
+\end_inset
+
+ command by MSA with order zero to create MSA-level spatial ordinal information
+ theory indexes.
+ Correlations between spatial indexes and the aspatial index are decreasing
+ in the radius the spatial index uses (from 0.98 with the 500m radius to
+ 0.76-0.77 with the 8000m radius).
+ Index values generally decrease with spatial scale but much more in some
+ MSAs than in others, suggesting income distribution across neighborhoods
+ changes more sharply in some MSAs than in others.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Spatial Black-White Information Theory Indexes for Race:
+\end_layout
+
+\begin_layout Standard
+I adopt the spatial information theory index in equation 7, calculating
+ spatial versions of the Black-White information theory measures of racial
+ segregation above using the spatially-weighted LPC function to weight the
+ aspatial racial population counts in the information theory equation.
+ 
+\end_layout
+
+\begin_layout Subsection
+Key Explanatory Variables: Land Use Regulation Measures
+\end_layout
+
+\begin_layout Standard
+The 2005 Wharton Residential Land Use Regulation Index (WRLURI) proxies
+ for land use regulation.
+ Gyourko, Saiz, and Summers (2008) discusses their 2005 survey of municipal
+ Planning Directors or Chief Administrative Officers on residential land
+ use regulation in 2,649 municipalities in the United States.
+ Gyourko provides weights to aggregate the index into a 1999-MSA-level dataset,
+ which I use (dropping municipalities outside year-1999 MSAs).
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+WRLURI data are available as of April 2020 at http://real-faculty.wharton.upenn.edu
+/gyourko/land-use-survey/
+\end_layout
+
+\end_inset
+
+ WRLURI decomposes into the following 11 subindices.
+\end_layout
+
+\begin_layout Standard
+Local Political Pressure Index (LPPI) assesses the importance for 
+\begin_inset Quotes eld
+\end_inset
+
+residential building activity and growth management
+\begin_inset Quotes erd
+\end_inset
+
+ of local and county government, community pressure, city budget constraints,
+ school crowding, opposition to growth, and local land conservation initiatives.
+ Local political pressures may be a response to recent local population
+ growth and diversification that I expect would slow future growth and integrati
+on.
+ County government importance may affect segregation more at a larger between-mu
+nicipality spatial scale than do city council, city budget constraints,
+ and city council opposition to growth.
+ School crowding may increase segregation between school districts and school
+ zones.
+ I expect community pressure and citizen opposition to growth to primarily
+ increase segregation at the smallest neighborhood spatial scales.
+ Local land conservation ballot measures may reduce intra-jurisdiction segregati
+on if open space protection makes affluent more willing to live in denser
+ mixed-income neighborhoods, but otherwise may increase intra- or inter-jurisdic
+tional segregation as lower income families who can't afford housing adjacent
+ to open space amenities sort into outlying communities by proximity to
+ amenities.
+ 
+\end_layout
+
+\begin_layout Standard
+State Political Involvement Index (SPII) reflects both the adoption of new
+ statewide land use restrictions 1995-2005 and state legislative involvement
+ in local 
+\begin_inset Quotes eld
+\end_inset
+
+residential building activity and growth management.
+\begin_inset Quotes erd
+\end_inset
+
+ New state land use restrictions likely slow not only housing growth but
+ also neighborhood sorting, implying ambiguous segregation effects, because
+ state governments may favor more inclusionary restrictions and statewide
+ restrictions raise development costs in both new and old neighborhoods.
+ I expect that state involvement generally reduces segregation at larger
+ spatial scales but that specific state environmental rules and growth managemen
+t policies vary widely in their effects.
+\end_layout
+
+\begin_layout Standard
+State Court Involvement Index (SCII) captures the tendency of state appellate
+ courts to uphold municipal land use regulations.
+ I expect this empowers municipalities to impose exclusionary zoning, reinforcin
+g segregation across all spatial levels.
+\end_layout
+
+\begin_layout Standard
+Local Zoning Approval Index (LZAI) reflects the number of local bodies required
+ to approve any zoning change request.
+ Local Planning Approval Index (LPAI) reflects the number of local bodies
+ required to approve a project.
+ Local Assembly Index (LAI) is an indicator for certain New England localities
+ that require popular approval at an open town meeting for any zoning change.
+ Added barriers to new and higher density housing likely reinforce segregation
+ but could potentially slow neighborhood transitions toward segregation,
+ particularly at smaller spatial scales.
+ 
+\end_layout
+
+\begin_layout Standard
+Supply Restriction Index (SRI) reflects the presence of statutory limits
+ on the number of building permits, number of units authorized per year,
+ total number of multifamily dwellings, and number of units per multifamily
+ building.
+ I expect restricting total multifamily dwellings and units per multifamily
+ building, by limiting housing density and mix, increases macro-segregation
+ between high and low demand regions within growing MSAs.
+ Limiting building permits and units authorized per year likely slows both
+ new housing growth and neighborhood sorting, implying an ambiguous expected
+ effect on segregation.
+ 
+\end_layout
+
+\begin_layout Standard
+Density Restriction Index (DRI) is an indicator for having a one-acre minimum
+ lot size requirement.
+ I expect minimum lot size increases segregation by limiting both maximum
+ housing density and affordable housing options.
+ 
+\end_layout
+
+\begin_layout Standard
+Open Space Index (OSI) is an indicator for having open space requirements.
+ Requiring lots to dedicate some portion for open space limits development
+ options.
+ Housing costs will rise on lots with open space rules.
+ But neighborhoods that preserve open space amenities without explicitly
+ limiting housing may be more amenable for the affluent to live and still
+ permit lower income housing options.
+ 
+\end_layout
+
+\begin_layout Standard
+Exactions Index (EI) is an indicator for having exactions on developers
+ for a share of infrastructure costs related to the development.
+ Exactions reduce new housing growth, but paying the cost of additional
+ infrastructure may deter new developments segregated from other neighborhoods,
+ with effects likely at larger spatial scales.
+ 
+\end_layout
+
+\begin_layout Standard
+Approval Delay Index (ADI) captures the expected number of months between
+ application and receipt of building permit.
+ A slower permitting process raises fixed costs making some affordable housing
+ projects financially infeasible, likely increasing segregation, but it
+ could also slow neighborhood sorting, potentially extending a neighborhood
+ transition period between segregated equilibrium states.
+\end_layout
+
+\begin_layout Subsection
+Control Variables
+\end_layout
+
+\begin_layout Standard
+From decennial US Census 2000 SF1 and SF3 data files at the MSA level, I
+ obtain the following MSA-level control variables: natural log of total
+ MSA population in 2000, share of total MSA population who is Black only
+ or Hispanic only, share of total MSA households with annual household income
+ less than $20,000, and share of total MSA households with annual household
+ income $60,000 or more.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+I use year-2000 data instead of ACS 5-year 2012-2016 data due to challenges
+ with crosswalking data from 2012-2016 boundaries to 2000 boundaries.
+ Since I'm not concerned with a causal interpretation for these control
+ variables, I would prefer 2012-2016 estimates for all variables to more
+ precisely capture potential sources of variation in segregation outside
+ of land use regulation but would need a more precise crosswalk.
+\end_layout
+
+\end_inset
+
+ The Gini Index of Inequality measure of MSA income inequality comes from
+ ACS 5-year 2016 MSA-level data crosswalked to year-2000 MSAs and PMSAs.
+\end_layout
+
+\begin_layout Standard
+MSA-level number of municipal jurisdictions in 2002 comes from a list of
+ local government jurisdictions from the 2002 Census of Governments (COG).
+ I create a count variable equal to the number of municipalities (cities,
+ townships, etc.), which excludes county, school district, and other non-general-
+purpose municipal governments.
+ Joint city/county governments like San Francisco count only once, and separate
+ county governments don't count at all.
+ I attempt to follow Rothwell and Massey (2009, 2010) and Lens and Monkonnen
+ (2016) in this definition.
+ However, I multiply the number of municipalities by the number of general
+ purpose governments.
+ The 2002 COG file identifies a municipality's county but not MSA, so I
+ use the Missouri Census Data Center's Geocorr program to match year-2000
+ counties to year-2000 MSAs and PMSAs.
+ The final variable reflects the mean of the product of the number of municipali
+ties and number of general purpose governments within each county in the
+ MSA.
+\end_layout
+
+\begin_layout Subsection
+Instrumental Variables
+\end_layout
+
+\begin_layout Standard
+MSA-level 1982 Local Public Protective Inspection and Regulation Expenditures
+ as a Share of Total Local Public Revenues comes from 1982 Census State
+ and Local Government Finance Data at the individual jurisdiction level.
+ I crosswalk these year-1982 jurisdictions into year-2000 MSAs.
+ Dividing MSA-level total protective expenditures by MSA-level total revenues
+ produces a protective expenditure share variable.
+\end_layout
+
+\begin_layout Standard
+MSA-level Number of Stream Segments, following Dawkins (2005), come from
+ joining the 1991 USGS 48-state hydrography layer from 1:2,000,000-scale
+ DLG data to NHGIS 2000 MSA boundary data in ArcGIS Pro.
+ For each MSA, I count the number of stream segments at least 1km in length.
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Subsection
+Information Theory Index of Income Segregation: Wharton Residential Land
+ Use Regulation Index (WRLURI)
+\end_layout
+
+\begin_layout Standard
+Tables 2 and 3 present results for how overall land use restrictiveness
+ affects different measures of residential segregation by income.
+ Table 2 measures residential segregation of households by household income
+ level.
+ Table 3 measures residential segregation of households by the ratio of
+ household income to poverty threshold.
+ Information theory index measures of segregation can range from zero under
+ no segregation to one under complete segregation.
+ Each table displays results of both OLS (odd columns) and IV (even columns)
+ estimates for an aspatial (columns 1 and 2) and five spatial measures differing
+ in the radius of their distance-based population weights: 500 meters (columns
+ 3 and 4), 1000 meters (columns 5 and 6), 2000 meters (columns 7 and 8),
+ 4000 meters (columns 9 and 10), and 8000 meters (columns 11 and 12).
+\end_layout
+
+\begin_layout Standard
+Table 2 shows economically and statistically significant negative effects
+ of WRLURI on the Information Theory Index measure of household income segregati
+on in all specifications except only marginally statistically significant
+ in the aspatial (OLS and IV) and the 500m radius (OLS) specifications.
+ Both precision and magnitude of estimates increase with spatial scale.
+ The variance across MSAs in income segregation decreases as spatial scale
+ increases.
+ Standardized point estimates for WRLURI attenuate almost proportionally
+ up to the 4000m spatial scale.
+ IV estimates roughly tripled the OLS coefficient estimate magnitudes.
+ The IV is strong (
+\begin_inset Formula $F=18.7$
+\end_inset
+
+), underidentification is rejected, and the null of exogenous instruments
+ is not rejected.
+\end_layout
+
+\begin_layout Standard
+For IV results, a standard deviation increase in WRLURI decreases household
+ income segregation 0.31 standard deviations (at the aspatial scale), 0.38
+ standard deviations (at the 500m radius scale), 0.49 (1000m), 0.62 (2000m),
+ 0.73 (4000m), and 0.72 (8000m).
+ This implies an increase in restrictiveness of land use regulation in St.
+ Louis MSA from the 25th percentile to the 75th percentile (just below Riverside
+) would reduce segregation 10% from the 76th to the 60th percentile for
+ the 500m radius (just below Las Vegas) and 25% from 86th to 56th percentile
+ for the 4000m radius (slightly below Oakland).
+\end_layout
+
+\begin_layout Standard
+Table 3 presents results for the indices of segregation by ratio of a person's
+ income to the poverty threshold.
+ Coefficient estimates are also negative but about 30-50% smaller and only
+ statistically significant for 2000m, 4000m, and 8000m spatial scales (1000m
+ was marginally significant).
+ For IV results, a standard deviation increase in WRLURI decreases poverty
+ ratio segregation 0.14 standard deviations (at the aspatial scale), 0.20
+ standard deviations (at the 500m radius scale), 0.28 (1000m), 0.40 (2000m),
+ 0.49 (4000m), and 0.46 (8000m).
+ Again, the IV is strong (
+\begin_inset Formula $F=18.7$
+\end_inset
+
+), underidentification is rejected, and the null of exogenous instruments
+ is not rejected.
+\end_layout
+
+\begin_layout Subsection
+Information Theory Index of Income Segregation: WRLURI Components
+\end_layout
+
+\begin_layout Standard
+Individual components of WRLURI have associations with the information theory
+ index of segregation by household income (Table 4) and by poverty ratio
+ (Table 5) of varying signs, magnitudes, and significance.
+ State involvement and approval delay appear to drive the overall negative
+ effect of WRLURI; other types of regulation, such as residential density
+ restrictions (lot area minimums) and local zoning approval complexity,
+ may increase segregation.
+ Open space requirements also may reduce segregation.
+ Unlike findings in Lens and Monkonnen (2016), local political pressure
+ and local project approval complexity appear to reduce rather than increase
+ income segregation, at least at higher spatial scales.
+\end_layout
+
+\begin_layout Paragraph
+Local Political Pressure Index (LPPI):
+\end_layout
+
+\begin_layout Standard
+LPPI has a statistically significant negative association with all the indices
+ of household income segregation (except only marginally significant for
+ 500m radius and for aspatial) but only in IV estimates, which suffer from
+ weak instruments (
+\begin_inset Formula $F=3.9$
+\end_inset
+
+) such that true standard errors may be larger.
+ LPPI is especially vulnerable to endogeneity because it captures current
+ public attitudes toward land use regulation issues and is much more likely
+ determined by recent conditions.
+ IV maginitudes range from 11 (aspatial) to 180 (2000m) times as large as
+ the positive and insignificant OLS estimates.
+ A one unit increase in LPPI reflects municipalities in an MSA increasing
+ local political pressure by a standard deviation on average.
+ For IV specifications, a standard deviation increase in LPPI reduces household
+ income segregation by between .71 (aspatial) and 1.55 (8000m radius) standard
+ deviations.
+\end_layout
+
+\begin_layout Paragraph
+State Political Involvement Index (SPII):
+\end_layout
+
+\begin_layout Standard
+SPII has a statistically significant negative association with all aspatial
+ and spatial levels of segregation by household income except only marginially
+ significant for the 500m IV specification and insignificant for the aspatial
+ IV specification.
+ The IV is strong (
+\begin_inset Formula $F=15.2$
+\end_inset
+
+) but at the 500m scale nearly rejects the null of excludability with a
+ 0.07 Hansen J p-value.
+ The aspatial IV estimate is just 12% larger in magnitude than the OLS estimate,
+ but spatial IV estimates are 24% (500m) to 104% (8000m) larger in magnitude.
+ A unit increase in SPII translates to state political involvement increasing
+ in an MSA's municipalities by a standard deviation on average.
+ IV results imply a standard deviation increase in SPII decreases aspatial
+ segregation 0.25 standard deviations.
+ Point estimates increase in magnitude with spatial scale from 0.29 (500m)
+ to 0.62 (8000m) standard deviations.
+ 
+\end_layout
+
+\begin_layout Standard
+SPII has a statistically significant negative association with segregation
+ by poverty ratio in all specifications except only a marginally significant
+ negative effect for the 1000m spatial scale IV specification and no significant
+ effect for 500m and aspatial IV specifications.
+ Magnitudes are generally similar across all spatial scales in OLS, with
+ a standard deviation increase in SPII associated with a 0.22 (aspatial)
+ to 0.27 (4000m) standard deviation decrease in segregation by poverty ratio.
+ However, in IV specifications, magnitudes range from 0.11 (aspatial) to
+ 0.42 (4000m) standard deviations.
+\end_layout
+
+\begin_layout Paragraph
+State Court Involvement Index (SCII):
+\end_layout
+
+\begin_layout Standard
+SCII has no statistically significant association with income segregation
+ except a marginally significant negative effect for household income segregatio
+n at the 4000m radius in the IV specification.
+ Moreover, the IV's null of excludability is rejected in all SCII specifications
+ (
+\begin_inset Formula $p<0.05$
+\end_inset
+
+) except segregation by poverty ratio at the aspatial, 500m, and 1000m scales.
+\end_layout
+
+\begin_layout Paragraph
+Local Zoning Approval Index (LZAI):
+\end_layout
+
+\begin_layout Standard
+LZAI, an MSA's average number (0-6) of government bodies required to approve
+ a local zoning change, has a statistically significant positive association
+ with household income segregation in all specifications except only marginally
+ significant at the 500m spatial scale in IV.
+ Poverty ratio segregation is statistically significant in OLS at 500m,
+ 1000m, and 8000m scales but only marginally significant at 2000m and 4000m
+ scales.
+ Poverty ratio segregation is statistically significant in IV for 2000m,
+ 4000m, and 8000m scales.
+ LZAI coefficient estimates are always positive, but IVs are weak at explaining
+ variation in LZAI (
+\begin_inset Formula $F=3.4$
+\end_inset
+
+).
+ OLS point estimates imply a standard deviation increase in LZAI is associated
+ with an increase of 0.10-0.14 standard deviations in segregation.
+ However, IV point estimates imply a standard deviation increase in LZAI
+ increases segregation by household income 0.84 (aspatial) to 1.95 (4000m)
+ standard deviations and segregation by poverty ratio 0.36 (aspatial) to
+ 1.26 (8000m) standard deviations.
+\end_layout
+
+\begin_layout Paragraph
+Local Project Approval Index (LPAI):
+\end_layout
+
+\begin_layout Standard
+LPAI, an MSA's average number (0-6) of government bodies required to approve
+ a local project, has a statistically significant positive association in
+ OLS with segregation by poverty ratio at aspatial, 500m, and 1000m scales.
+ LPAI has a marginally statistically significant positive association in
+ OLS with 2000m-scale segregation by poverty ratio and with aspatial-, 500m-,
+ 1000m-, and 2000m-scale segregation by household income.
+ Using IV, LPAI has a statistically significant negative association only
+ with 8000m-scale by household income and marginally significant negative
+ assocation with segregation by household income across aspatial and all
+ spatial scales and with 8000m-scale segregation by poverty ratio.
+ IVs provide fairly weak identification with an F-statistic of 4.5.
+ 
+\end_layout
+
+\begin_layout Standard
+Using OLS, a standard deviation (s.d.) increase in LPAI is associated with
+ an increase of 0.13 (aspatial, 500m, and 1000m scales) and 0.11 (2000m) s.d.
+ in segregation by poverty ratio and 0.09 (aspatial and 2000m scales), 0.10
+ (500m), and 0.11 (1000m) s.d.
+ by household income.
+ But using IV, the sign changes from positive to negative with an s.d.
+ increase in LPAI associated with a decrease ranging from 0.57 (aspatial)
+ to 1.08 (8000m) s.d.
+ in segregration by household income and 0.82 s.d in 8000m-scale segregation
+ by poverty ratio.
+ If IVs are valid, this suggests added project approval veto points may
+ either passively prolong transitional periods of neighborhoods sorting
+ from one socioeconomic group to another or actively promote socioeconomic
+ diversity in residential development, at least at larger spatial scales.
+\end_layout
+
+\begin_layout Paragraph
+Local Assembly Index (LAI):
+\end_layout
+
+\begin_layout Standard
+LAI has no statistically significant association with the information theory
+ index of income segregation.
+\end_layout
+
+\begin_layout Paragraph
+Density Restriction Index (DRI):
+\end_layout
+
+\begin_layout Standard
+DRI, an MSA's share of municipalities with a one-acre minimum lot size for
+ some lots, in OLS has a statistically significant positive association
+ with the index of household income segregation across aspatial and all
+ spatial scales and marginally significant positive association with aspatial-,
+ 2000m-, and 4000m-scale poverty ratio segregation.
+ IV results are also always positive but marginally significant only for
+ 2000m- and 4000m-scale household income segregation.
+ IV is weak (
+\begin_inset Formula $F=2.3$
+\end_inset
+
+) in all DRI specifications.
+ Excludability is rejected (
+\begin_inset Formula $p<0.03$
+\end_inset
+
+) at all scales for household income segregation and at the 8000m scale
+ for poverty ratio segregation.
+ Using OLS, a standard deviation increase in DRI is associated with a 0.12-0.16
+ s.d.
+ increase in household income segregation and a 0.08-0.11 s.d.
+ increase in poverty ratio segregation.
+ Using IV, a standard deviation increase in DRI is associated with a 1.15
+ (2000m scale) and 1.38 (4000m scale) s.d.
+ increase in household income segregation.
+\end_layout
+
+\begin_layout Paragraph
+Open Space Index (OSI):
+\end_layout
+
+\begin_layout Standard
+OSI, an MSA's share of municipalities with open space requirements, has
+ a negative and significant association with household income segregation
+ in all spatial scales (only marginally significant at 500m scale) using
+ IV and in only 8000m scale using OLS.
+ OSI also has a negative and significant association with 4000m-scale poverty
+ ratio segregation and marginally significant with 2000m and 8000m scales,
+ using IV.
+ A standard deviation increase in OSI decreases household income segregation
+ 1.08 s.d.
+ (1000m scale), 1.36 s.d.
+ (2000m scale), 1.61 s.d.
+ (4000m scale), and 1.60 s.d.
+ (8000m scale) using IV, about 20 times the magnitude using OLS.
+ A standard deviation increase in OSI decreases poverty ratio segregation
+ 1.07 s.d (4000m) using OLS.
+ The IVs are weak with an F-statistic of 4.4.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Exactions Index (EI):
+\end_layout
+
+\begin_layout Standard
+EI, an MSA's share of municipalities that charge developers for public infrastru
+cture expenses associated with their project, only has a statistically significa
+nt association with the 4000m-scale household income segregation and only
+ has a marginally significant association with the 2000m-scale household
+ income segregation, using IV.
+ A one standard deviation increase in EI is associated with a 0.70 s.d.
+ decrease in 4000m-scale household income segregation.
+ However, IV is weak (
+\begin_inset Formula $F=4.4$
+\end_inset
+
+), and excludability is rejected (
+\begin_inset Formula $p<0.05$
+\end_inset
+
+) at all scales for household income segregation.
+ EI's coefficients are negative at all scales using IV but usually positive
+ using OLS.
+ EI has a positive and marginally significant association with aspatial
+ household income segregation using OLS.
+\end_layout
+
+\begin_layout Paragraph
+Supply Restrictions Index (SRI):
+\end_layout
+
+\begin_layout Standard
+SRI, an MSA's municipalities average number (0-6) of types of restrictions
+ on the quantity of new housing units, has a marginally significant negative
+ association with all spatial indices of household income segregation.
+ IV point estimates would indicate a standard deviation increase in SRI
+ decreases spatial household income segregation 0.75 s.d.
+ (500m), 1.00 s.d.
+ (1000m), 1.31 s.d.
+ (2000m), 1.55 s.d.
+ (4000m), and 1.50 s.d.
+ (8000m).
+ This weakly suggests permit supply caps may prolong periods of neighborhood
+ transition from one socioeconomic group to another.
+ But the IVs are weak with an F-statistic of 2.7, suggesting the true standard
+ errors may be even larger.
+\end_layout
+
+\begin_layout Paragraph
+Approval Delay Index (ADI):
+\end_layout
+
+\begin_layout Standard
+ADI, the average number of months for project approval, has a statistically
+ significant negative association with household income segregation in all
+ specifications.
+ For segregation by poverty ratio, ADI is statistically significant and
+ negative in all OLS specifications and at 2000m scale and above (marginally
+ significant at 1000m) in IV specifications.
+ IV magnitudes are 1.2-3.0 times as large as OLS point estimates.
+ An s.d.
+ increase in ADI decreases household income segregation 0.37 s.d.
+ (aspatial), 0.44 s.d.
+ (500m), 0.56 s.d (1000m), 0.71 s.d.
+ (2000m), and 0.83 s.d.
+ (4000m and 8000m).
+ The IVs are strong with an F-statistic of 16.1.
+ This suggests project delays may prolong neighborhood transitions from
+ one socioeconomic group to another.
+\end_layout
+
+\begin_layout Subsection
+Information Theory Index of Black-White Segregation
+\end_layout
+
+\begin_layout Standard
+Table 6 shows WRLURI also has an economically significant negative effect
+ on Black-White segregation, with economic magnitude and precision increasing
+ with spatial scale.
+ WRLURI has a statistically significant negative association with Black-White
+ segregation in all OLS specifications but only at 8000m and 4000m scales
+ and marginally at the 2000m scale in IV regressions.
+ All coefficients are small, but the spatial coefficient is 65% (2000m),
+ 104% (4000m), and 150% (8000m) larger than the aspatial coefficient in
+ the IV regressions.
+ A standard deviation increase in WRLURI decreases Black-White segregation
+ 0.34 s.d.
+ (2000m), 0.42 s.d.
+ (4000m), and 0.51 s.d.
+ (8000m).
+ IVs are overidentified and strong with an F-statistic of 18.7.
+ Null of exogenous exclusion restrictions for IVs is not rejected.
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Standard
+Residential segregation by income inhibits upward economic mobility.
+ Land use regulation has a theoretically ambiguous effect on segregation.
+ Prior empirical literature relies on IVs that may not be valid and ignores
+ the spatial dimension of segregation.
+ Using alternative IVs, my regression results indicate land use regulation,
+ as measured by WRLURI, modestly reduces MSA residential segregation by
+ income, as measured by the spatial information theory index.
+ However, the results are heterogeneous in both sign and magnitude across
+ types of land use regulation and in magnitude across measures of segregation.
+ The analysis closely follows the Lens and Monkonnen (2016) regressions
+ but uses different years of data, includes over 290 MSAs instead of just
+ the 95 largest MSAs, includes dependent variables with different spatial
+ scales, and includes instrumental variables.
+ The findings of statistically significant and negative effects of WRLURI
+ on spatial segregation, albeit with modest magnitudes, contrast with the
+ insignificant results of Lens and Monkonnen (2016) for aspatial segregation.
+\end_layout
+
+\begin_layout Standard
+Why does this paper find a significant negative effect of WRLURI on income
+ segregation when Lens and Monkonnen (2016) found no significant effect
+ for the overall WRLURI? Segregation measures accounting for nearby neighborhood
+s better capture the relationship than the aspatial measure.
+ Additionally, the IVs may help address endogeneity by which some less segregate
+d areas may choose to adopt less restrictive land use policies.
+ Also, Lens and Monkonnen (2016) studied only MSAs with over 500,000 people,
+ whereas this paper nearly tripled observations by including smaller MSAs
+ for which regulations may have less effect on available housing supply.
+ Future work could examine how labor demand, housing demand, and other metropoli
+tan characteristics may interact with land use regulation to affect segregation.
+\end_layout
+
+\begin_layout Standard
+Land use regulations appear to, on net, help counteract other market forces
+ driving segregation by income within MSAs.
+ Land use regulation may slow neighborhood sorting by income by containing
+ development to already developed areas and making it more difficult for
+ higher income residents to develop or redevelop areas to isolate themselves
+ from lower income residents within a given MSA.
+ WRLURI closely correlates with a Census tract's ratio of housing costs
+ to upward mobility (Chetty et al.
+ 2020).
+ MSA-wide land use regulation may drive income sorting between highly-regulated
+ MSAs rather than within and also shift population growth toward less regulated
+ MSAs.
+ Future research should explore how much of the negative finding is explained
+ by spillover effects between MSAs.
+\end_layout
+
+\begin_layout Standard
+While spatial and aspatial income segregation have similar coefficient signs,
+ point estimate magnitude rises with spatial scale, suggesting regulations
+ overall are more likely to promote residential integration at broader levels
+ (e.g.
+ high school zone) than at narrower spatial scales.
+ Future research could explore potential mechanisms like regulations' effects
+ on neighborhood filtering and the size versus frequency of new residential
+ development projects.
+ 
+\end_layout
+
+\begin_layout Standard
+Segregation indices by poverty ratio do not capture variation in income
+ for anyone earning more than 200% of the poverty threshold.
+ Thus, weaker results for segregation by poverty ratio imply regulation
+ plays a larger role in segregation of higher income households, at least
+ for lower spatial scales, consistent with Lens and Monkonnen (2016)'s finding
+ for aspatial segregation of high income households.
+\end_layout
+
+\begin_layout Standard
+Consistent with Lens and Monkonnen (2016), results are heterogeneous across
+ subindices.
+ Subindices roughly proxy different regulatory components in land use.
+ Results suggest some types of land use regulations decrease (and others
+ increase) residential segregation by income.
+ Because each subindex specification relegates all other subindices into
+ the error term, identification is more questionable.
+ Future work should examine the causal effects of specific land use policies
+ more thoroughly.
+\end_layout
+
+\begin_layout Standard
+Nonetheless, this paper's findings indicate that increasing the state role
+ in land use regulation can reduce income segregation within MSAs.
+ Statewide political coalitions may be more likely than local political
+ coalitions to prioritize affordable housing or neighborhood income diversity.
+ Future research could examine states scoring highly in state involvement
+ like Washington and Oregon, which both require local governments to adopt
+ comprehensive land use plans that include urban growth boundaries and affordabl
+e housing plans subject to state standards.
+ 
+\end_layout
+
+\begin_layout Standard
+While state involvement and approval delay policies trade off reducing within-MS
+A segregation and increasing between-MSA segregation, other regulations
+ like local zoning approval complexity and density restrictions may unambiguousl
+y increase segregation.
+ Governments may want to reduce the number of veto points in their zoning
+ approval process.
+ Residential development that encourages income-diverse neighborhoods may
+ require more flexible zoning.
+ Fewer veto points could make it easier to negotiate terms of beneficial
+ residential developments.
+ Lastly, relaxing density restrictions like lot area minimums could make
+ it possible for lower income people to live in neighborhoods with higher
+ land values.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Appendix
+\end_layout
+
+\begin_layout Subsection
+Aspatial Segregation Measures in Rothwell and Massey (2010)
+\end_layout
+
+\begin_layout Standard
+The dissimilarity index, a popular evenness measure, compares a group’s
+ population share in each sub-area unit to that in the MSA overall.
+ The Dissimilarity Index of Poverty (
+\begin_inset Formula $D$
+\end_inset
+
+) is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D=\sum_{j}\frac{P_{j}\times|\frac{LP_{j}}{P_{j}}-\frac{LP}{P}|}{2\times LP\times(1-\frac{LP_{j}}{P_{j}})}
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $j$
+\end_inset
+
+ is sub-area unit 
+\begin_inset Formula $j$
+\end_inset
+
+, 
+\begin_inset Formula $P$
+\end_inset
+
+ is population, and 
+\begin_inset Formula $LP$
+\end_inset
+
+ is population below poverty.
+\end_layout
+
+\begin_layout Standard
+Rothwell and Massey (2010) use another evenness measure, a population-weighted
+ Neighborhood Gini Index of inequality in median household income across
+ sub-areas:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Gini=\frac{N+1}{N-1}-\frac{2\times[\sum_{j}(O{}_{j}\times P_{j}\times M{}_{j})]}{N\times(N-1)\times[\sum_{j}(P_{j}\times M{}_{j})]}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $N$
+\end_inset
+
+ is number of sub-areas, 
+\begin_inset Formula $M_{j}$
+\end_inset
+
+ is median income in subarea 
+\begin_inset Formula $j$
+\end_inset
+
+, and 
+\begin_inset Formula $O_{j}$
+\end_inset
+
+ is rank of sub-area 
+\begin_inset Formula $j$
+\end_inset
+
+ by median income.
+\end_layout
+
+\begin_layout Standard
+Exposure reflects the degree to which different groups reside in common
+ areas.
+ Rothwell and Massey (2010)'s exposure index measures the ratio of the likelihoo
+d a randomly-selected person in an MSA belongs to a different population
+ group as another person randomly-selected from their sub-area to the share
+ of the randomly-selected person's population group in an MSA.
+ The Exposure (of Poor to Affluent) Index denoted by 
+\begin_inset Formula $X$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X=\frac{\sum_{j}\left(\frac{LP_{j}}{LP}\times\frac{HP_{j}}{P_{j}}\right)}{\sum_{j}\frac{LP_{j}}{P_{j}}}
+\]
+
+\end_inset
+
+ for sub-area 
+\begin_inset Formula $j$
+\end_inset
+
+, population 
+\begin_inset Formula $P$
+\end_inset
+
+, population in poverty 
+\begin_inset Formula $LP$
+\end_inset
+
+, and affluent population 
+\begin_inset Formula $HP$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Construction of Aspatial Information Theory Index Measures of Segregation
+\end_layout
+
+\begin_layout Standard
+To construct aspatial segregation measures, I merge ACS 2016 5-year block-group
+ level data with the 2016 block group to 2000 MSA crosswalk.
+ Then I create variables for number of block groups in each MSA, total populatio
+n in each MSA, MSA population below poverty, total number of households
+ in each MSA, total number of households with income below $25,000 in each
+ MSA, mean block-group-level median household income in each MSA, rank of
+ a block group’s median household income within each MSA, and an MSA identifier
+ variable.
+ Next, I construct the following MSA-level information theory index measures
+ of segregation: 
+\end_layout
+
+\begin_layout Paragraph
+Ordinal Information Theory Index (Theil's H) for Poverty: 
+\end_layout
+
+\begin_layout Standard
+I use the Stata “rankseg” command to create a ordinal information theory
+ index using population counts of bins for the following percentage ranges
+ of the poverty threshold: 0-49%, 50-99%, 100-124%, 125-149%, 150-184%,
+ 185-199%, and 200%+.
+ I set order at zero.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Ordinal Information Theory Index for Income: 
+\end_layout
+
+\begin_layout Standard
+I use the Stata “rankseg” command to create a ordinal information theory
+ index using number of household counts of bins for the following household
+ income ranges: $0-9,999, $10,000-14,999, $15,000-19,999, $20,000-24,999,
+ $25,000-29,999, $30,000-34,999, $35,000-39,999, $40,000-44,999, $45,000-49,999,
+ $50,000-59,999, $60,000-74,999, $75,000-99,999, $100,000-124,999, $125,000-149,
+999, $150,000-199,999, and $200,000+.
+ I set order at zero.
+\end_layout
+
+\begin_layout Paragraph
+Information Theory Indexes for Race: 
+\end_layout
+
+\begin_layout Standard
+For the simpler non-ordinal information theory indexes, I create a 
+\begin_inset Quotes eld
+\end_inset
+
+Theil's H
+\begin_inset Quotes erd
+\end_inset
+
+ index variable 
+\begin_inset Formula $H$
+\end_inset
+
+, using the Reardon and Townsend (2018)'s Stata 
+\begin_inset Quotes eld
+\end_inset
+
+seg
+\begin_inset Quotes erd
+\end_inset
+
+ command.
+ The MSA-level indexes reflect the following equation (equation 3) from
+ Reardon (2011) and Reardon, Bischoff, Owens, and Townsend (2018): 
+\begin_inset Formula 
+\[
+H=1-\frac{\sum_{j=1}^{J}\left(\frac{P_{j}}{P}E_{j}\right)}{E}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+E=\begin{cases}
+\sum_{m=1}^{2}\frac{P_{m}}{P}\ln(\frac{P}{P_{m}}) & \textrm{if}\:0<\frac{P_{m}}{P}<1\\
+0 & \textrm{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E_{j}=\begin{cases}
+\sum_{m=1}^{2}\frac{P_{jm}}{P}\ln(\frac{P}{P_{jm}}) & \textrm{if}\:0<\frac{P_{jm}}{P}<1\\
+0 & \textrm{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+for block group 
+\begin_inset Formula $j$
+\end_inset
+
+, population 
+\begin_inset Formula $P$
+\end_inset
+
+, and two racial categories 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ I calculate the White-Black race-pair index.
+ White is the White non-Hispanic population, and Black is the Black non-Hispanic
+ population.
+\end_layout
+
+\begin_layout Subsection
+Construction of Spatial Information Theory Index Measures of Segregation
+\end_layout
+
+\begin_layout Standard
+After creating MSA-level aspatial segregation measures, I add the MSA identifier
+ variable to a datafile from the NBER Census Block Group Distance Database
+ and divide the NBER block group distance datafile into separate files by
+ MSA.
+ The NBER datafile includes the distance in miles between every pair of
+ 2010 block groups within 50 miles of one another.
+ NBER calculates great-circle distances using the Haversine formula from
+ internal points in the block group (point closest to a block group’s geographic
+ center that is within the boundaries of the block group).
+ I add all the block-group-level population count variables to each file
+ twice (one corresponding to block group one and the other corresponding
+ to block group two) so that each block group pair has their individual
+ block group population counts for each poverty and income category.
+ Next, I create the following distance-based segregation measures (but only
+ report regressions using information theory indexes): 
+\end_layout
+
+\begin_layout Paragraph
+Spatial Ordinal Information Theory Indexes for Poverty and for Income: 
+\end_layout
+
+\begin_layout Standard
+Following Reardon et al.
+ (2006), I create separate indexes that account for the population composition
+ of nearby block groups up to each of the following radii 
+\begin_inset Formula $r$
+\end_inset
+
+: 500m, 1000m, 2000m, and 4000m.
+ The “rankseg” command doesn’t include a spatial option, so I create spatial-adj
+usted ordinal bins.
+ First, I create the biweight proximity function (equation 5): 
+\begin_inset Formula 
+\[
+w_{jk}=\begin{cases}
+[1-(\frac{d_{jk}}{r})^{2}]^{2} & \textrm{if}\:d_{jk}<r\\
+0 & {\textstyle \mathrm{otherwise}}
+\end{cases}
+\]
+
+\end_inset
+
+for every combination of block groups 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ For each income group 
+\begin_inset Formula $m$
+\end_inset
+
+ in each block group 
+\begin_inset Formula $p$
+\end_inset
+
+, I create the spatially-weighted local population composition (LPC) function
+ (equation 6): 
+\begin_inset Formula 
+\[
+LPC_{jm}=\frac{\sum_{k\in J}P{}_{km}\times w{}_{jk}dk}{\sum_{k\in J}P{}_{k}\times w{}_{jk}dk}
+\]
+
+\end_inset
+
+that divides the sum of all these weighted nearby-block-group populations
+ in group 
+\begin_inset Formula $m$
+\end_inset
+
+ by the sum of weighted nearby-block-group populations overall.
+ I weight each aspatial population count bin by 
+\begin_inset Formula $LPC_{jm}$
+\end_inset
+
+ to create spatial-adjusted ordinal bins and run 
+\begin_inset Quotes eld
+\end_inset
+
+rankseg
+\begin_inset Quotes erd
+\end_inset
+
+ command by MSA with order zero to create MSA-level spatial ordinal information
+ theory indexes.
+\end_layout
+
+\begin_layout Paragraph
+Spatial Information Theory Indexes for Race: 
+\end_layout
+
+\begin_layout Standard
+Similarly to the spatial information theory index in equation 8, I follow
+ same procedure to calculate spatial versions of the Black-White information
+ theory measures of racial segregation above using the spatially-weighted
+ LPC function to weight the aspatial racial population counts in the information
+ theory equation.
+ 
+\end_layout
+
+\begin_layout Subsection
+Construction of Control Variables
+\end_layout
+
+\begin_layout Paragraph
+MSA-Level US Census 2000 Control Variables:
+\end_layout
+
+\begin_layout Standard
+From the decennial US Census 2000 SF1 and SF3 data files at the MSA level,
+ I obtain the following MSA-level control variables: the natural log of
+ total MSA population in 2000, share of the total MSA population who is
+ Black only or Hispanic only, share of total MSA households with annual
+ household income less than $20,000, and share of total MSA households with
+ annual household income at least $60,000.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+I use year-2000 data instead of ACS 5-year 2012-2016 data due to challenges
+ with crosswalking data from 2012-2016 boundaries to 2000 boundaries.
+ Since I'm not concerned with a causal interpretation for these control
+ variables, I would prefer 2012-2016 estimates for all variables to more
+ precisely capture potential sources of variation in segregation outside
+ of land use regulation but would need a more precise crosswalk.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+MSA-Level ACS 2016 5-year Gini Index of Income Inequality:
+\end_layout
+
+\begin_layout Standard
+The Gini measure of MSA income inequality comes from ACS 5-year 2016 MSA-level
+ data.
+ I use the Missouri Census Data Center's Geocorr program to crosswalk CBSA-level
+ Gini Index of Inequality from ACS 2016 5-year to year 2000 MSAs and PMSAs
+ using population-based weights.
+\end_layout
+
+\begin_layout Paragraph
+MSA-Level Number of Municipal Jurisdictions in 2002:
+\end_layout
+
+\begin_layout Standard
+Jurisdictional fragmentation likely increases income segregation.
+ Fragmenting municipal services within an MSA will increase the incentive
+ for high income to self sort into more expensive neighborhoods by exacerbating
+ neighborhood quality differences.
+ It also will encourage high income municipalities to restrict housing available
+ for lower income families to avoid free riding by low income families and
+ to capture rent from local housing demand.
+ I obtain a list of local government jurisdictions from the 2002 Census
+ of Governments (COG) and create a count variable equal to the number of
+ municipalities (cities, townships, etc.), which excludes county, school
+ district, and other non-general-purpose municipal governments.
+ Joint city/county governments like San Francisco count only once and separate
+ county governments don't count at all.
+ I attempt to follow Rothwell and Massey (2009, 2010) and Lens and Monkonnen
+ (2016) in this definition.
+ The 2002 COG file identifies a municipality's county but not MSA, so I
+ use the Missouri Census Data Center's Geocorr program to match year-2000
+ counties to year-2000 MSAs and PMSAs.
+ 
+\end_layout
+
+\begin_layout Subsection
+IV Construction
+\end_layout
+
+\begin_layout Paragraph
+MSA-Level 1982 Local Public Protective Inspection and Regulation Expenditures
+ as a Share of Total Local Public Revenues: 
+\end_layout
+
+\begin_layout Standard
+Saiz (2010) uses this variable to instrument for WRLURI in its regressions
+ on housing supply elasticity.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Saiz (2010) explores the determinants of housing supply elasticity and estimates
+ housing supply elasticities of different MSAs.
+ His conceptual model of city housing supply predicts that price sensitivity
+ to demand shocks and productivity and amenities decrease with land availability
+ and that population size is independent of land availability.
+ He runs a 3SLS with IVs for log WRLURI (1982 log protective inspection
+ and regulation spending share of public revenues, 1971 nontraditional Christian
+ share, and 1940-1970 city decline dummy) and for housing quantity (hours
+ of sun, immigration shocks, and Bartik employment shift-share and interaction
+ with share of undevelopable geography).
+ Share of undevelopable land is negatively associated with housing supply
+ elasticity and positively associated with housing price levels and growth,
+ 1970-2000, controlling for regional effects and coastal markets.
+ Share of undevelopable land and WRLURI are closely and positively associated
+ and can describe housing supply elasticity.
+ Log of local public expenditures on protective inspection and regulation
+ as a share of total public revenues is strongly positively associated with
+ log WRLURI.
+ Non-traditional Christian share of population is strongly negatively associated
+ with WRLURI (presumably via evangelical emphasis on individualism and limited
+ government).
+ Geographic constraints in growing cities and higher housing prices contributed
+ to 2005 land use regulation.
+ I adopt the 1982 log protective inspection and regulation spending share
+ of public revenues to instrument for WRLURI in my segregaation regressions
+ on the assumption that this variable only affects segregation through its
+ association with land use regulation.
+\end_layout
+
+\end_inset
+
+ I adopt it for my segregation regressions under the assumption that protective
+ inspection and regulation spending only affects segregation through land
+ use regulation.
+ To create the protective inspection and regulation variable, I use 1982
+ Census State and Local Government Finance Data at the individual jurisdiction
+ level and crosswalk these year-1982 jurisdictions into year-2000 MSAs.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+1982 Census State and Local Government Finance Data at the individual jurisdicti
+on level comes from https://www.census.gov/programs-surveys/gov-finances/data/hist
+orical-data.html.
+ I crosswalk changes in geographic GOVS ID over time and convert from 1982
+ GOVS ID to 2002 FIPS county code using Census of Governments files: (IDxWalk.txt
+ and GOVS_to_FIPS_Codes_State_&_County_2007.xls).
+ I adjust 2002 FIPS county codes for certain governments using David Dorn’s
+ list of changes since 1982 to reflect county boundaries in 2000 (https://www.ddo
+rn.net/data/FIPS_County_Code_Changes.pdf).
+ Otherwise, I assume county boundaries are unchanged between 1982 and 2002.
+ Missouri Census Data Center provides a 2000 county to 2000 PMSA and 2000
+ MSACMSA crosswalk with land area weights (http://mcdc.missouri.edu/applications/g
+eocorr.html).
+ This paper defines 2000 MSAs as all 2000 PMSAs and MSAs (CMSAs are combinations
+ of PMSAs and are thus ignored).
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+After merging the 1982 state and local government finance data with the
+ crosswalk, I collapse the dataset by 2000 MSA, creating variables for total
+ protective inspection and regulation expenditures and total revenues by
+ all local government jurisdictions in 1982 within the 2000 MSA counties,
+ using county to MSA land area weights.
+ Dividing MSA-level total protective expenditures by MSA-level total revenues
+ produces a protective expenditure share variable.
+ I use the log of protective expenditure share as an instrumental variable
+ in my primary specifications.
+\end_layout
+
+\begin_layout Paragraph
+MSA-Level Number of Streams Instrumental Variable:
+\end_layout
+
+\begin_layout Standard
+Following Dawkins (2005), I join the 1991 USGS 48-state hydrography layer
+ from 1:2,000,000-scale DLG data to NHGIS 2000 MSA boundary data in ArcGIS
+ Pro.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Dawkins (2005) examines how local government fragmentation affects residential
+ segregation by race across neighborhoods and jurisdictions.
+ He uses 1980-2000 US Census of Population and Housing and USGS data on
+ number of rivers.
+ He expects higher income households will offer higher bids for housing
+ in jurisdictions with more local public services if marginal valuation
+ of public services rises faster with income than does demand for housing.
+ Tiebout choice should thus increase income sorting across jurisdictions,
+ and, given Black-White income/wealth gap, increase racial sorting across
+ jurisdictions.
+ Tiebout choice may also increase racial segregation due to race-correlated
+ public services preference heterogeneity and preferences for living near
+ people of same race or near people of advantaged race.
+ He runs a 2SLS region fixed effects regression for an MSA-level Gini segregatio
+n measure on a Herfindahl index of population shares in each jurisdiction
+ to measure Tiebout choice instrumented by (1) whether state adopted Dillon’s
+ rule restricting local control over incorporation, fiscal policy, and legislati
+on; and (2) number of rivers and streams.
+ A 10% increase in Tiebout choice increases segregation across neighborhoods
+ by no more than 1% and across jurisdictions by 4-7%.
+ I adopt the number of rivers measure to instrument for land use regulation.
+ If its effect on income segregation just runs through Tiebout choice as
+ assumed in this paper, it should be valid for instrumenting land use regulation
+, controlling for number of jurisdictions.
+ But number of rivers may aid segregation even in absence of land use regulation
+ or make historic restrictions on residential location more difficult to
+ overcome due to lower social interaction, perhaps resolvable via controls.
+ Dillon’s rule, originating in 1873 Iowa, rapidly adopted by other state
+ courts and bolstered by the US Supreme Court in 1907 and 1923, can directly
+ affect local discretion to set land use regulations but may be associated
+ with other state and local policies influencing segregation.
+ Richardson, Gough, and Puentes (2003) argues “judicial attitudes and constituti
+onal or legislative priorities” largely randomly determine whether a state
+ holds to Dillon’s Rule.
+ 
+\end_layout
+
+\end_inset
+
+ I export the attribute table identifying the list of stream segments in
+ each MSA to a CSV file and import the data to Stata.
+ For each MSA, I count the number of stream segments at least 1km in length.
+ I also calculate the total length of all stream segments within each MSA
+ but currently only use the stream count variable.
+\end_layout
+
+\begin_layout Subsection
+Combining Data from Different Years and Geographic Units
+\end_layout
+
+\begin_layout Paragraph
+2016 Block Group to 2000 MSA Crosswalk:
+\end_layout
+
+\begin_layout Standard
+Missouri Census Data Center matches every 2000 Census block to its corresponding
+ 2000 Census PMSA or MSA.
+ NHGIS crosswalks 2000 Census blocks to 2010 Census blocks.
+ 
+\end_layout
+
+\begin_layout Paragraph
+ACS 2016 5-Year Block-Group-Level Data File:
+\end_layout
+
+\begin_layout Standard
+I create a single data file with ACS 2016 5-year block-group level data
+ from all 50 states and DC, including geographic, population, housing, income,
+ and race variables.
+ I merge ACS 2016 5-year block-group level data with the 2016 block group
+ to 2000 MSA crosswalk.
+ Block-group-level median household income is top coded at $250,000 and
+ usually bottom coded at $2,500.
+ I assume all block groups with median household income $250,000 or greater
+ equal $250,000 and with $2,500 or less equal $2,500.
+ For block groups with alternative bottom coding, I similarly assume the
+ median household income equals the bottom code.
+ 
+\end_layout
+
+\begin_layout Subsection
+Preparing Regressions
+\end_layout
+
+\begin_layout Standard
+I combine all these variables into a single data file and regress various
+ measures of segregation on the WRLURI and its components, using ln(2000
+ population), 2016 Gini, share of households with income below $20,000 in
+ 2000, share of households with income $60,000 or more in 2000, share of
+ population in 2000 who is Black only or Hispanic only, and number of municipal
+ jurisdictions in 2002.
+ To instrument for the land use regulation variables, I use number of streams
+ from the 1991 USGS hydgrography layer and 1982 local public protective
+ inspection and regulation expenditures as a share of total local public
+ revenues.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-40"
+
+\end_inset
+
+Acs, Gregory, Rolf Pendall, Mark Treskon, and Amy Khare (2017) 
+\begin_inset Quotes eld
+\end_inset
+
+The Cost of Segregation: National Trends and the Case of Chicago, 1990-2010.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Urban Institute
+\emph default
+.
+ https://www.urban.org/sites/default/files/publication/89201/the_cost_of_segregati
+on_final.pdf.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-12"
+
+\end_inset
+
+Albouy, David and Gabriel Erhlich (2018) “Housing productivity and the social
+ cost of land-use restrictions.” 
+\emph on
+Journal of Urban Economics
+\emph default
+ 107: 101-120.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-39"
+
+\end_inset
+
+Amior, Michael and Alan Manning (June 2015) “The Persistence of Local Joblessnes
+s.” Working Paper, Centre for Economic Performance Discussion Paper No 1357.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-38"
+
+\end_inset
+
+Andersson, Fredrik and Tom Mayock (2014) “How does home equity affect mobility?”
+ 
+\emph on
+Journal of Urban Economics
+\emph default
+ 84: 23-39.
+ https://doi.org/10.1016/j.jue.2014.08.004.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-30"
+
+\end_inset
+
+Bartik, Timothy J.
+ (1991) 
+\emph on
+Who Benefits from State and Local Economic Development Policies?
+\emph default
+ Kalamazoo, MI: W.E.
+ Upjohn Institute for Employment Research.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-29"
+
+\end_inset
+
+Berry, Christopher (2001) “Land Use Regulation and Residential Segregation:
+ Does Zoning Matter?” 
+\emph on
+American Law and Economics Review
+\emph default
+ 3, No.
+ 2: 251-274.
+ https://www.jstor.org/stable/42705390.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-28"
+
+\end_inset
+
+Bischoff, Kendra and Sean F.
+ Reardon (2014) “Residential Segregation by Income, 1970-2009.” In 
+\emph on
+Diversity and Disparities: America Enters a New Century
+\emph default
+, edited by John Logan, Chapter 7, 208-233.
+ Russell Sage Foundation.
+ https://www.russellsage.org/publications/diversity-and-disparities.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-26-1"
+
+\end_inset
+
+Bloze, Gintautas and Morten Skak (November 2016) “Housing equity, residential
+ mobility and commuting.” 
+\emph on
+Journal of Urban Economics
+\emph default
+ 96: 156-65.
+ https://doi.org/10.1016/j.jue.2016.09.003.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-27"
+
+\end_inset
+
+Bricker, Jesse and Brian Bucks (January 2016) “Negative home equity, economic
+ insecurity, and household mobility over the Great Recession.” 
+\emph on
+Journal of Urban Economics
+\emph default
+ 91: 1-12.
+ https://doi.org/10.1016/j.jue.2015.10.001.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-25"
+
+\end_inset
+
+Brown, Jennifer and David A.
+ Matsa (June 2020) “Locked in by leverage: Job search during the housing
+ crisis.” 
+\emph on
+Journal of Financial Economics
+\emph default
+ 136, Issue 3: 623-648.
+ https://doi.org/10.1016/j.jfineco.2019.11.001.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-12"
+
+\end_inset
+
+Chetty, Raj, John Friedman, Nathaniel Hendren, Maggie R.
+ Jones, and Sonya Porter (2018) 
+\begin_inset Quotes eld
+\end_inset
+
+The Opportunity Atlas: Mapping the Childhood Roots of Social Mobility.
+\begin_inset Quotes erd
+\end_inset
+
+ National Bureau of Economic Research Working Paper 25147.
+ https://doi.org/10.3386/w25147.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-37"
+
+\end_inset
+
+Chetty, Raj and Nathaniel Hendren (August 2018) “The Impacts of Neighborhoods
+ on Intergenerational Mobility II: County-Level Estimates.” 
+\emph on
+The Quarterly Journal of Economics
+\emph default
+ 133, Issue 3: 1163-1228.
+ https://doi.org/10.1093/qje/qjy006.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-10"
+
+\end_inset
+
+Chetty, Raj, Nathaniel Hendren, Maggie R.
+ Jones, and Sonya Porter (May 2020) 
+\begin_inset Quotes eld
+\end_inset
+
+Race and Economic Opportunity in the United States: an Intergenerational
+ Perspective.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+The Quarterly Journal of Economics 
+\emph default
+135, Issue 2: 711-783.
+ https://doi.org/10.1093/qje/qjz042.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-36"
+
+\end_inset
+
+Chetty, Raj, Nathaniel Hendren, Patrick Kline, and Emmanuel Saez (2014)
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Where is the land of opportunity? The geography of intergenerational mobility
+ in the United States
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+The Quarterly Journal of Economics
+\emph default
+ 129(4), 1553-1623.
+ https://doi.org/10.1093/qje/qju022.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-35"
+
+\end_inset
+
+Chetty, Raj, Michael Steppner, Sarah Abraham, Shelby Lin, Benjamin Scuderi,
+ Nicholas Turner, Augustin Bergeron, and David Cutler (2016) 
+\begin_inset Quotes eld
+\end_inset
+
+The Association Between Income and Life Expectancy in the United States,
+ 2001-2014.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+JAMA
+\emph default
+ 315, 16: 1750-1766.
+ doi:10.1001/jama.2016.4226.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-23"
+
+\end_inset
+
+Coulson, N.
+ Edward, and Paul L.E.
+ Grieco (January 2013).
+ “Mobility and mortgages: Evidence from the PSID.” 
+\emph on
+Regional Science and Urban Economics
+\emph default
+ 43, Issue 1: 1-7.
+ https://doi.org/10.1016/j.regsciurbeco.2012.10.004.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-20"
+
+\end_inset
+
+Cutler, David M.
+ and Edward L.
+ Glaeser (August 1997) 
+\begin_inset Quotes eld
+\end_inset
+
+Are Ghettos Good or Bad?
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+The Quarterly Journal of Economics
+\emph default
+ 112, Issue 3: 827-872.
+ https://doi.org/10.1162/003355397555361.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-22"
+
+\end_inset
+
+Dawkins, Casey J.
+ (November 2005).
+ “Tiebout choice and residential segregation by race in US metropolitan
+ areas, 1980-2000” 
+\emph on
+Regional Science and Urban Economics
+\emph default
+ 35, Issue 6: 734-755.
+ https://doi.org/10.1016/j.regsciurbeco.2005.01.002.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-30"
+
+\end_inset
+
+ESRI (2020) ArcGIS Pro.
+ Redlands, CA: Environmental Systems Research Institute.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-21"
+
+\end_inset
+
+Ewing, Reid, Shima Hamidi, James B.
+ Grace, and Yehua Dennis Wei (April 2016) 
+\begin_inset Quotes eld
+\end_inset
+
+Does urban sprawl hold down upward mobility?
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Landscape and Urban Planning
+\emph default
+ 148: 80-88.
+ https://doi.org/10.1016/j.landurbplan.2015.11.012.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-20"
+
+\end_inset
+
+Ferreira, Fernando, Joseph Gyourko, and Joseph Tracy (July 2010) “Housing
+ busts and household mobility.” 
+\emph on
+Journal of Urban Economics
+\emph default
+ 68, Issue 1: 34-45.
+ https://doi.org/10.1016/j.jue.2009.10.007.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-11"
+
+\end_inset
+
+Fogli, Alessandra and Guerrieri, Veronica (2019).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+The End of the American Dream? Inequality and Segregation in US Cities.
+\begin_inset Quotes erd
+\end_inset
+
+ University of Chicago, Becker Friedman Institute for Economics Working
+ Paper No.
+ 2019-99.
+ http://dx.doi.org/10.2139/ssrn.3435823.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-19"
+
+\end_inset
+
+Galster, George and Patrick Sharkey (2017) “Spatial foundations of inequality:
+ A conceptual model and empirical overview.” 
+\emph on
+RSF: The Russell Sage Foundation Journal of the Social Sciences
+\emph default
+ 3, no.
+ 2: 1-33.
+ https://www.rsfjournal.org/content/rsfjss/3/2/1.full.pdf.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-18"
+
+\end_inset
+
+Ganong, Peter and Daniel Shoag (November 2017) “Why has regional income
+ convergence in the U.S.
+ declined?” 
+\emph on
+Journal of Urban Economics
+\emph default
+ 102: 76-90.
+ https://doi.org/10.1016/j.jue.2017.07.002.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-17"
+
+\end_inset
+
+Glaeser, Edward and Joseph Gyourko (2005) “Urban Decline and Durable Housing.”
+ 
+\emph on
+Journal of Political Economy
+\emph default
+ 113, no.
+ 2: 345-75.
+ https://www.journals.uchicago.edu/doi/pdf/10.1086/427465.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-16"
+
+\end_inset
+
+Glaeser, Edward and Joseph Gyourko (2018).
+ “The Economic Implications of Housing Supply.” 
+\emph on
+Journal of Economic Perspectives
+\emph default
+ 32, No.
+ 1: 3-30.
+ https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.32.1.3.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-19"
+
+\end_inset
+
+Graif, Corina and Stephen A.
+ Matthews (2017).
+ 
+\begin_inset Quotes eld
+\end_inset
+
+The Long Arm of Poverty: Extended and Relational Geographies of Child Victimizat
+ion and Neighborhood Violence Exposures.
+\begin_inset Quotes erd
+\end_inset
+
+ Justice Quarterly 34, 6: 1096-1125.
+ https://doi.org/10.1080/07418825.2016.1276951.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-17"
+
+\end_inset
+
+Gyourko, Joseph, Albert Saiz, and Anita Summers (March 2008) 
+\begin_inset Quotes eld
+\end_inset
+
+A New Measure of the Local Regulatory Environment for Housing Markets: The
+ Wharton Residential Land Use Regulatory Index.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Urban Studies
+\emph default
+ 45, 3: 693-729.
+ https://doi.org/10.1177/0042098007087341.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+Hilber, Christian A.L.
+ (May 2010).
+ “New housing supply and the dilution of social capital.” 
+\emph on
+Journal of Urban Economics
+\emph default
+ 67, Issue 3: 419-37.
+ https://doi.org/10.1016/j.jue.2009.12.001.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-21"
+
+\end_inset
+
+Hipp, John R.
+ and Adam Boessen (May 2013) 
+\begin_inset Quotes eld
+\end_inset
+
+Egohoods as waves washing across the city: A new measure of “neighborhoods”.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Criminology
+\emph default
+ 51, Issue 2: 287-327.
+ https://doi.org/10.1111/1745-9125.12006.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-6"
+
+\end_inset
+
+Hodler, Roland, Michele Valsecchi, and Alberto Vesperoni (2017) “Ethnic
+ Geography: Measurement and Evidence” CESifo Working Paper Series No.
+ 6720.
+ https://ssrn.com/abstract=3098275.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-19"
+
+\end_inset
+
+Hoxby, Caroline, M.
+ (2000) "Does Competition among Public Schools Benefit Students and Taxpayers?"
+ 
+\emph on
+American Economic Review
+\emph default
+ 90, No.
+ 5: 1209-1238.
+ https://pubs.aeaweb.org/doi/pdfplus/10.1257/aer.90.5.1209.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+Iceland, John, Daniel H.
+ Weinberg, and Erika Steinmetz (August 2002) “Racial and Ethnic Residential
+ Segregation in the United States: 1980-2000” Census 2000 Special Reports.
+ https://www.census.gov/hhes/www/housing/housing_patterns/front_toc.html.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-26"
+
+\end_inset
+
+Intrator, Jake, Jonathan Tannen, and Douglas S.
+ Massey (November 2016) “Segregation by race and income in the United States
+ 1970-2010.” 
+\emph on
+Social Science Research
+\emph default
+ 60: 45-60.
+ https://doi.org/10.1016/j.ssresearch.2016.08.003.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-7"
+
+\end_inset
+
+Jargowsky, Paul A.
+ (2018) “The Persistence of Segregation in the 21st Century,” 
+\emph on
+Law and Inequality: Journal of Theory and Practice
+\emph default
+ 36, no.
+ 2: 207-230.
+ https://heinonline.org/HOL/P?h=hein.journals/lieq36&i=215.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-9"
+
+\end_inset
+
+Jargowsky, Paul A.
+ and Christopher A.
+ Wheeler (November 2017) “Economic Segregation in US Metropolitan Areas,
+ 1970-2010.” Paper Prepared for the 21st Century Cities Initiative.
+ http://dx.doi.org/10.2139/ssrn.3454612.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-28"
+
+\end_inset
+
+Kline, Patrick, and Enrico Moretti (2014) “People, Places, and Public Policy:
+ Some Simple Welfare Economics of Local Economic Development.” 
+\emph on
+Annual Review of Economics
+\emph default
+ 6: 629-62.
+ https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-080213-041024.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-20"
+
+\end_inset
+
+Krivo, Lauren J., Byron, Reginald A., Catherine A.
+ Calder, Ruth D.
+ Peterson, Christopher R.
+ Browning, Mei-Po Kwan, and Jae Yong Lee (November 2015) 
+\begin_inset Quotes eld
+\end_inset
+
+Patterns of local segregation: Do they matter for neighborhood crime?
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Social Science Research
+\emph default
+ 54: 303-18.
+ https://doi.org/10.1016/j.ssresearch.2015.08.005.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+Laamanen, Jani-Petri (October 2017) “Home-ownership and the Labour Market:
+ Evidence from Rental Housing Market Deregulation.” 
+\emph on
+Labour Economics
+\emph default
+ 48: 157-67.
+ https://doi.org/10.1016/j.labeco.2017.08.005.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-29"
+
+\end_inset
+
+Lee, Barrett A., Chad R.
+ Farrell, Sean F.
+ Reardon, and Stephen A.
+ Matthews (2019) “From Census Tracts to Local Environments: An Egocentric
+ Approach to Neighborhood Racial Change.” 
+\emph on
+Spatial Demography
+\emph default
+ 7: 1-26.
+ https://doi.org/10.1007/s40980-018-0044-5.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-24"
+
+\end_inset
+
+Lee, Barrett A., Sean F.
+ Reardon, Glenn Firebaugh, Chad R.
+ Farrell, Stephen A.
+ Matthews, and David O’Sullivan (October 2008) “Beyond the Census Tract:
+ Patterns and Determinants of Racial Segregation at Multiple Geographic
+ Scales” 
+\emph on
+American Sociological Review
+\emph default
+ 73, 5: 766-791.
+ https://doi.org/10.1177/000312240807300504.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-10"
+
+\end_inset
+
+Lens, Michael C.
+ (2017) “Measuring the geography of opportunity” 
+\emph on
+Progress in Human Geography
+\emph default
+ 41, 1: 1-23.
+ https://escholarship.org/uc/item/5fp7x7xc.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-15"
+
+\end_inset
+
+Lens, Michael C.
+ and Paavo Monkkonen (2016) “Do Strict Land Use Regulations Make Metropolitan
+ Areas More Segregated by Income?” 
+\emph on
+Journal of American Planning Association
+\emph default
+ 82, 1: 6-21.
+ https://doi.org/10.1080/01944363.2015.1111163.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+Lester, T.
+ William and Daniel A.
+ Hartley (March 2014) “The long term employment impacts of gentrification
+ in the 1990s.” 
+\emph on
+Regional Science and Urban Economics
+\emph default
+ 45: 80-9.
+ https://doi.org/10.1016/j.regsciurbeco.2014.01.003.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-26"
+
+\end_inset
+
+Manson, Steven, Jonathan Schroeder, David Van Riper, Tracy Kugler, and Steven
+ Ruggles (2020) IPUMS National Historical Geographic Information System:
+ Version 15.0 [dataset].
+ Minneapolis, MN: IPUMS.
+ http://doi.org/10.18128/D050.V15.0.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-5"
+
+\end_inset
+
+Massey, Douglas S.
+ and Nancy A.
+ Denton (December 1988) “The Dimensions of Residential Segregation” 
+\emph on
+Social Forces
+\emph default
+ Vol.
+ 67, No.
+ 2: 281-315.
+ https://www.jstor.org/stable/2579183.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-6"
+
+\end_inset
+
+Massey, Douglas S., Jonathan Rothwell, and Thurston Domina (2009) “The Changing
+ Bases of Segregation in the United States” 
+\emph on
+The ANNALS of the American Academy of Political and Social Science
+\emph default
+ 626, 1: 74-90.
+ https://doi.org/10.1177/0002716209343558.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-28"
+
+\end_inset
+
+Missouri Census Data Center (2018) 
+\begin_inset Quotes eld
+\end_inset
+
+Geocorr Applications.
+\begin_inset Quotes erd
+\end_inset
+
+ http://mcdc.missouri.edu/applications/geocorr.html.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-8"
+
+\end_inset
+
+Meltzer, Rachel (2013) “Do Homeowners Associations Affect Citywide Segregation?
+ Evidence from Florida Municipalities” 
+\emph on
+Housing Policy Debate
+\emph default
+ 23, Issue 4: 688-713.
+ https://doi.org/10.1080/10511482.2013.812571.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-9"
+
+\end_inset
+
+Meltzer, Rachel and Pooya Ghorbani (2017) “Does gentrification increase
+ employment opportunities in low-income neighborhoods?” 
+\emph on
+Regional Science and Urban Economics
+\emph default
+ 66: 52-73.
+ https://doi.org/10.1016/j.regsciurbeco.2017.06.002.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+Owens, Ann (2016) 
+\begin_inset Quotes eld
+\end_inset
+
+Inequality in Children's Contexts: Income Segregation of Households with
+ and without Children.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+American Sociological Review
+\emph default
+ 81, 3: 549-74.
+ https://doi.org/10.1177/0003122416642430.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-10"
+
+\end_inset
+
+Owens, Ann, Sean F.
+ Reardon, and Christopher Jencks (August 2016) “Income Segregation Between
+ Schools and School Districts.” 
+\emph on
+American Educational Research Journal
+\emph default
+ Vol.
+ 53, No.
+ 4: 1159-97.
+ https://doi.org/10.3102/0002831216652722.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-16"
+
+\end_inset
+
+Pendall, Rolf, Robert Puentes, and Jonathan Martin (August 2006) 
+\begin_inset Quotes eld
+\end_inset
+
+From traditional to reformed: A review of the land use regulations in the
+ nation's 50 largest metropolitan areas.
+\begin_inset Quotes erd
+\end_inset
+
+ The Brookings Institution Research Brief.
+ https://www.brookings.edu/wp-content/uploads/2016/06/20060802_Pendall.pdf.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-31"
+
+\end_inset
+
+Reardon, Sean F.
+ (2011) “Measures of Income Segregation.” Stanford Center for Education Policy
+ Analysis.
+ https://cepa.stanford.edu/content/measures-income-segregation.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-39"
+
+\end_inset
+
+Reardon, Sean F.
+ and Kendra Bischoff (2011) “Income Inequality and Income Segregation” 
+\emph on
+American Journal of Sociology
+\emph default
+ Volume 116, Number 4 (January 2011): 1092-1153.
+ https://www.jstor.org/stable/10.1086/657114.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-42"
+
+\end_inset
+
+Reardon, Sean F., Kendra Bischoff, Ann Owens, and Joseph B.
+ Townsend (2018) “Has Income Segregation Really Increased? Bias and Bias
+ Correction in Sample-Based Segregation Estimates.” 
+\emph on
+Demography
+\emph default
+ 55: 2129-2160.
+ https://doi.org/10.1007/s13524-018-0721-4.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-41"
+
+\end_inset
+
+Reardon, Sean F., Glenn Firebaugh, David O’Sullivan, and Stephen Matthews
+ (August 2006) “A New Approach to Measuring Socio-Spatial Economic Segregation”
+ Paper Prepared for the 29th General Conference of The International Association
+ for Research in Income and Wealth.
+ http://www.iariw.org/papers/2006/reardon.pdf.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-40"
+
+\end_inset
+
+Reardon, Sean F., Lindsay Fox, and Joseph Townsend (July 2015) “Neighborhood
+ Income Composition by Household Race and Income, 1990-2009.” T
+\emph on
+he ANNALS of the American Academy of Political and Social Science
+\emph default
+ 660, 1: 78-97.
+ https://doi.org/10.1177/0002716215576104.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-43"
+
+\end_inset
+
+Reardon, Sean F., Stephen A.
+ Matthews, David O’Sullivan, Barrett A.
+ Lee, Glenn Firebaugh, Chad R.
+ Farrell, and Kendra Bischoff (August 2008) “The Geographic Scale of Metropolita
+n Racial Segregation” 
+\emph on
+Demography
+\emph default
+ 45: 489-514.
+ https://doi.org/10.1353/dem.0.0019.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-5-1"
+
+\end_inset
+
+Reardon, Sean F.
+ and David O’Sullivan (2004) 
+\begin_inset Quotes eld
+\end_inset
+
+Measures of Spatial Segregation.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Sociological Methodology
+\emph default
+ 34: 121-62.
+ https://doi.org/10.1111/j.0081-1750.2004.00150.x.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-44"
+
+\end_inset
+
+Reardon, Sean F., and Joseph B.
+ Townsend (2018) 
+\begin_inset Quotes eld
+\end_inset
+
+RANKSEG: Stata module to compute rank-order segregation measures with finite
+ sample-bias correction.
+\begin_inset Quotes erd
+\end_inset
+
+ https://EconPapers.repec.org/RePEc:boc:bocode:s458460.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-23"
+
+\end_inset
+
+Reardon, Sean F., and Joseph B.
+ Townsend (2018) 
+\begin_inset Quotes eld
+\end_inset
+
+SEG: Stata module to compute multiple-group diversity and segregation indices.
+\begin_inset Quotes erd
+\end_inset
+
+ https://EconPapers.repec.org/RePEc:boc:bocode:s375001.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-45"
+
+\end_inset
+
+Richardson, Jesse J., Meghan Zimmerman Gough, and Robert Puentes (2003) 
+\begin_inset Quotes eld
+\end_inset
+
+Is Home Rule the Answer? Clarifying the Influence of Dillon's Rule on Growth
+ Management.
+\begin_inset Quotes erd
+\end_inset
+
+ A Discussion Paper Prepared for the Brookings Institution Center on Urban
+ and Metropolitan Policy.
+ https://www.brookings.edu/wp-content/uploads/2016/06/dillonsrule.pdf.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-27"
+
+\end_inset
+
+Roth, Jean (2015) 
+\begin_inset Quotes eld
+\end_inset
+
+Block Group Distance Database.
+\begin_inset Quotes erd
+\end_inset
+
+ National Bureau of Economic Research Public Use Data Archive.
+ https://www.nber.org/research/data/block-group-distance-database.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-12"
+
+\end_inset
+
+Rothwell, Jonathan T.
+ (August 2012) “The Effects of Racial Segregation on Trust and Volunteering
+ in US Cities” 
+\emph on
+Urban Studies
+\emph default
+ 49, 10: 2109-36.
+ https://doi.org/10.1177/0042098011428180.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-14"
+
+\end_inset
+
+Rothwell, Jonathan T.
+ and Douglas S.
+ Massey (July 2009) 
+\begin_inset Quotes eld
+\end_inset
+
+The Effect of Density Zoning on Racial Segregation in U.S.
+ Urban Areas.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Urban Affairs Review
+\emph default
+ Volume 44, Number 6: 779-806.
+ https://doi.org/10.1177/1078087409334163.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-16-1"
+
+\end_inset
+
+Rothwell, Jonathan T.
+ and Douglas S.
+ Massey (December 2010) “Density Zoning and Class Segregation in U.S.
+ Metropolitan Areas.” 
+\emph on
+Social Science Quarterly
+\emph default
+ Volume 91, Number 5: 1123-43.
+ https://doi.org/10.1111/j.1540-6237.2010.00724.x.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-17"
+
+\end_inset
+
+Rothwell, Jonathan T.
+ and Douglas S.
+ Massey (2015) “Geographic Effects on Intergenerational Income Mobility.”
+ 
+\emph on
+Economic Geography
+\emph default
+ Vol.
+ 91, No.
+ 1: 83-106.
+ https://doi.org/10.1111/ecge.12072.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-13"
+
+\end_inset
+
+Royuela, Vicente and Miguel Vargas (2010) “Residential Segregation: A Literature
+ Review.” Working Papers 7, Facultad de Economía y Empresa, Universidad Diego
+ Portales.
+ https://EconPapers.repec.org/RePEc:ptl:wpaper:7.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-38"
+
+\end_inset
+
+Rugh, Jacob S.
+ and Douglas S.
+ Massey (2014) “Segregation in Post-Civil Rights America: Stalled Integration
+ or End of the Segregated Century?” 
+\emph on
+Du Bois Review: Social Science Research on Race
+\emph default
+ 11, 2: 205-232.
+ https://doi.org/10.1017/S1742058X13000180.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-22"
+
+\end_inset
+
+Saiz, Albert (August 2010) “The Geographic Determinants of Housing Supply”
+ 
+\emph on
+The Quarterly Journal of Economics
+\emph default
+ 125, Issue 3: 1253-1296.
+ https://doi.org/10.1162/qjec.2010.125.3.1253.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-18"
+
+\end_inset
+
+Schelling, Thomas C.
+ (1971) 
+\begin_inset Quotes eld
+\end_inset
+
+Dynamic models of segregation.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of mathematical sociology
+\emph default
+ 1, no.
+ 2: 143-86.
+ https://doi.org/10.1080/0022250X.1971.9989794.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-14"
+
+\end_inset
+
+Sharp, Gregory and John Iceland (2013) “The residential segregation patterns
+ of whites by socioeconomic status, 2000-2011.” 
+\emph on
+Social Science Research
+\emph default
+ 42, Issue 4: 1046-60.
+ https://doi.org/10.1016/j.ssresearch.2013.03.007.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-29"
+
+\end_inset
+
+StataCorp (2019) Stata Statistical Software: Release 16.
+ College Station, TX: StataCorp LLC.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-27"
+
+\end_inset
+
+Troesken, Werner and Randall Walsh (July 2019) 
+\begin_inset Quotes eld
+\end_inset
+
+Collective Action, White Flight, and the Origins of Racial Zoning Laws.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+The Journal of Law, Economics, and Organization
+\emph default
+ Volume 35, Issue 2: 289-318.
+ https://doi.org/10.1093/jleo/ewz006.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-31"
+
+\end_inset
+
+U.S.
+ Census Bureau (2011) 
+\begin_inset Quotes eld
+\end_inset
+
+2002 Census of Governments: Government Organization Public Use Files.
+\begin_inset Quotes erd
+\end_inset
+
+ https://www.census.gov/govs/www/02PubUsedoc_GovOrg.html#sources.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-32"
+
+\end_inset
+
+U.S.
+ Geological Survey (2020) 
+\begin_inset Quotes eld
+\end_inset
+
+USGS Water Mission Area NSDI Node: 1:2,000,000-scale Digital Line Graph
+ files of streams.
+\begin_inset Quotes erd
+\end_inset
+
+ https://water.usgs.gov/GIS/metadata/usgswrd/XML/stream.xml.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-18"
+
+\end_inset
+
+Velez, Maria B.
+ and Kelly Richardson (May 2012) 
+\begin_inset Quotes eld
+\end_inset
+
+The Political Economy of Neighborhood Homicide in Chicago: The Role of Bank
+ Investment.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+The British Journal of Criminology
+\emph default
+ Volume 52, Issue 3: 490–513.
+ https://doi.org/10.1093/bjc/azr092.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-15"
+
+\end_inset
+
+Weinberg, Daniel H., John Iceland, and Erika Steinmetz (2003) “Measurement
+ of Segregation by the U.S.
+ Bureau of the Census in ‘Racial and Ethnic Residential Segregation in the
+ United States: 1980-2000’.” U.S.
+ Census Bureau Working Papers.
+ https://www.census.gov/library/working-papers/2003/demo/massey.html.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-25"
+
+\end_inset
+
+Wheeler, Christopher and Paul A.
+ Jargowsky (June 2018) “Promoting Inclusive Communities: How Cities Can
+ Utilize Local Housing Policy to Combat Economic Segregation.” Johns Hopkins
+ 21st Century Cities Initiative Policy Brief.
+ https://21cc.jhu.edu/wp-content/uploads/2018/06/promoting-inclusive-communities.pd
+f.
+\end_layout
+
+\end_body
+\end_document
